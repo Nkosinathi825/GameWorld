@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState  } from 'react';
 import RegisterPicture from '../images/registerpic.png';
 import sudoku1 from '../images/sudoku1.JPG';
 import sudoku2 from '../images/SUDOKU2.png';
@@ -6,39 +6,56 @@ import math1 from '../images/math1.jpeg';
 import math2 from '../images/math2.jpg';
 import tick1 from '../images/tick1.png';
 import tick2 from '../images/tick1.jpeg';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 
-import './Register.scss'; 
+import './Register.scss';
 
-const images = [RegisterPicture,sudoku1, sudoku2 , math1,math2,tick1,tick2];
+const images = [RegisterPicture, sudoku1, sudoku2, math1, math2, tick1, tick2];
 
 export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [status, setStatus] = useState('');
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const navigate = useNavigate(); 
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000); 
+        }, 3000);
 
-        return () => clearInterval(intervalId); 
+        return () => clearInterval(intervalId);
     }, []);
 
+    const handlerRegister = async (e) => {
+        e.preventDefault(); 
+
+        try {
+            await axios.post('http://localhost:5000/register', { name, email, password });
+            setStatus("Registered successfully");
+            navigate('/login'); 
+        } catch (error) {
+            setStatus("Error registering user. Please try again."); 
+        }
+    };
+
     return (
-        <div className='contanier'>
+        <div className='container'> 
             <main className='register-container'>
                 <section className='the-image'>
                     <section className='image'>
                         <img src={images[currentImageIndex]} alt="changing pictures" />
                     </section>
                     <section className='details'>
-                        <p>Have an account <a href="/register">Sign in</a></p>
+                        <p>Have an account? <Link to={'/login'}>Sign in</Link></p>
                     </section>
                 </section>
                 <section className='register-details'>
                     <h1>Sign up</h1>
-                    <form onSubmit={(e) => e.preventDefault()}>
+                    <p>{status}</p>
+                    <form onSubmit={handlerRegister}>
                         <section className='inputs'>
                             <label htmlFor="name">Name</label>
                             <input 
@@ -47,7 +64,7 @@ export default function Register() {
                                 name='name'
                                 placeholder='Enter your name' 
                                 value={name}
-                                onChange={(e) => setName(e.target.value)} // Use e instead of event
+                                onChange={(e) => setName(e.target.value)} 
                             />
                         </section>
                         <section className='inputs'>
