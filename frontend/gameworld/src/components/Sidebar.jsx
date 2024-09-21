@@ -3,13 +3,16 @@ import './Sidebar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faHistory, faChartLine, faSignOutAlt, faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../context/UserProvider'; 
+import {useNavigate} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
   const { logoutUser } = useContext(UserContext);
+  const navigate=useNavigate()
 
   const handleLogout = () => {
     logoutUser();
-    // Optionally, show a notification or redirect the user
+    navigate('/login')
   };
 
   return (
@@ -23,8 +26,10 @@ export default function Sidebar() {
           <span>Home</span>
         </div>
         <div>
+          <Link to={'/thegame'}>
           <FontAwesomeIcon icon={faGamepad} />
           <span>Games</span>
+          </Link>
         </div>
         <div>
           <FontAwesomeIcon icon={faHistory} />

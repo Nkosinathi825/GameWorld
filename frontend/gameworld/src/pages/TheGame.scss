@@ -1,0 +1,14 @@
+.games-container {
+    display: flex;
+    justify-content: space-around;  // Spread cards evenly
+    align-items: flex-start;
+    flex-wrap: wrap;  // Cards will wrap on smaller screens
+    padding: 20px;
+    gap: 20px;  // Space between cards
+  
+    @media (max-width: 768px) {
+      flex-direction: column;  // Stack cards on smaller screens
+      align-items: center;
+    }
+  }
+  
