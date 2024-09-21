@@ -44,7 +44,7 @@ const Sudoku = () => {
                   {num === 0 ? (
                     <input 
                       type="text" 
-                      maxLength="1" 
+                      maxLength="2" 
                       onChange={(event) => handleChange(rowIndex, colIndex, event)} 
                       placeholder=" " // Placeholder for empty cells
                     />
