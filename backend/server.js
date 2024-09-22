@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const user= require('./model/User.model')
+const Game =require('./model/Game.model')
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -69,6 +70,26 @@ app.post('/login', async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).send('Error logging in user');
+    }
+});
+app.post('/saveGame', async (req, res) => {
+    try {
+        const {user_id,level, timeOfCompletion,date,gameName}= req.body
+
+
+        const newGame = new Game({ 
+            user_id,
+            level,
+            timeOfCompletion,
+            date,
+            gameName,
+        });
+
+        await newGame.save();
+        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
+    } catch (error) {
+        console.error('Error saving game:', error);
+        res.status(500).json({ message: 'Failed to save game', error: error.message });
     }
 });
 

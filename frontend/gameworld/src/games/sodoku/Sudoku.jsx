@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useContext } from 'react';
 import './Sudoku.scss';
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'; 
+import { UserContext } from '../../context/UserProvider';
+
 
 const Sudoku = () => {
   const [puzzle, setPuzzle] = useState([]);
@@ -12,6 +15,8 @@ const Sudoku = () => {
   const [difficulty, setDifficulty] = useState('Easy');
   const [timer, setTimer] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
+  const [gameName] = useState("Sudoku");
+  const { user } = useContext(UserContext);
 
   useEffect(() => {
     const fetchPuzzle = async (level) => {
@@ -82,7 +87,19 @@ const Sudoku = () => {
     setDifficulty(level); // Set new difficulty
     setPopupVisible(false); // Close the popup
   };
-
+  const saveGame = async () => {
+    try {
+      const response = await axios.post('http://localhost:5000/saveGame', {
+        user_id: user.id,
+        level: difficulty,
+        timeOfCompletion: formatTime(),
+        gameName: gameName,
+      });
+      console.log('Game saved:', response.data);
+    } catch (error) {
+      console.error("Couldn't save your game:", error);
+    }
+  };
   useEffect(() => {
     let timerInterval;
     if (isRunning) {
@@ -90,11 +107,7 @@ const Sudoku = () => {
         setTimer(prevTimer => prevTimer + 1);
         if (checkCompletion()) {
           setWinnerPopupVisible(true);
-          try {
-            
-          } catch (error) {
-            
-          }
+          saveGame(); 
           setIsRunning(false);
         }
       }, 1000);

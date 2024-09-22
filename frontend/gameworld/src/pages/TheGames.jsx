@@ -8,12 +8,18 @@ export default function TheGames() {
 
   return (
     <main className='games-container'>
+      <section className='games-header'> 
+        <h3>"Endless Fun, One Destination – Play Anytime, Anywhere!"</h3>
+      </section>
+      <section className='games-games'>
         <Card
-        title="Sudoku"
-        image={sudoku1}
-        description="Sudoku is a number puzzle game."
-        link='/s'
-      />
+          title="Sudoku"
+          image={sudoku1}
+          description="Sudoku a number game."
+          link='/s'
+        />
+      </section>
+       
     </main>
   )
 }
