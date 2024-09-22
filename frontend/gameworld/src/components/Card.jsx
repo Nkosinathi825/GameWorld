@@ -1,13 +1,12 @@
 import React,{useEffect,useState} from 'react';
 import './Card.scss';  
-import sudoku1 from '../images/sudoku1.JPG';
-import sudoku2 from '../images/SUDOKU2.png';
+
+
 import { Link } from 'react-router-dom';
 
 
 
-const Card = ({ title, image, description, link}) => {
-  const images = [sudoku1, sudoku2];
+const Card = ({ title,  images = [], description, link}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
     const intervalId = setInterval(() => {
