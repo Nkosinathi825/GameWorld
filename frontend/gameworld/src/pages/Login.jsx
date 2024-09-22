@@ -6,13 +6,15 @@ import math1 from '../images/math1.jpeg';
 import math2 from '../images/math2.jpg';
 import tick1 from '../images/tick1.png';
 import tick2 from '../images/tick1.jpeg';
+import snake1 from '../images/snake1.png'
+import snake2 from '../images/snake2.png'
 import { UserContext } from '../context/UserProvider'; 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 import './Login.scss'; 
 
-const images = [RegisterPicture, sudoku1, sudoku2, math1, math2, tick1, tick2];
+const images = [RegisterPicture, sudoku1,  math1,snake1, tick1,sudoku2, tick2,snake2, math2];
 
 export default function Login() {
     const [email, setEmail] = useState('');
