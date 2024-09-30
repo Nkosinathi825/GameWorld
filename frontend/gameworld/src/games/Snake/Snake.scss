@@ -1,0 +1,197 @@
+.Snake-game {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    .Snake-header{
+      margin-top: -15px;
+      width: 100%;
+      height: 10%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: #333; 
+      
+      .title {
+        flex: 20;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #5a5a5a; 
+      }
+      
+      .options {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        .popup-menu {
+          position: absolute;
+          right: 0;
+          top: 30px;
+          background-color: #fff; 
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          z-index: 10;
+          padding: 0.5rem 0;
+          width: 150px;
+  
+          ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+  
+            li {
+              padding: 0.75rem 1rem;
+              color: #333;
+              cursor: pointer;
+              transition: background-color 0.2s;
+  
+              &:hover {
+                background-color: #e8f0fe; 
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .Snake-body{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 80%;
+  
+      .Snake-status {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+  
+        .outer-circle {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background-color: #ffeb3b; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+  
+          .inner-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #282c34; 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+          }
+        }
+      }
+  
+      .Snake-content{
+        width: 80%;
+        padding: 10px;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        .snake-board{
+            .gameboard{
+                border: 4px solid black;
+            }
+        }
+      }
+    }
+  
+    .Snake-end{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      width: 100%;
+  
+      button {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        background-color: #007bff; 
+        border: 2px solid #0056b3; 
+        color: white;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin: 0 0.5rem;
+        transition: background-color 0.3s, transform 0.2s;
+  
+        &:hover {
+          background-color: #0056b3; 
+          transform: scale(1.05); 
+        }
+  
+        &:nth-child(2) {
+          background-color: #28a745; 
+          border: 2px solid #218838; 
+          color: white;
+  
+          &:hover {
+            background-color: #218838;
+          }
+        }
+  
+        &:nth-child(3) {
+          background-color: #dc3545; 
+          border: 2px solid #c82333;
+          color: white;
+  
+          &:hover {
+            background-color: #c82333; 
+          }
+        }
+      }
+    }
+    .winner-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 2px solid #2196f3; /* Blue border */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      text-align: center;
+    
+      h2 {
+        color: #2196f3; /* Blue text */
+      }
+    
+      button {
+        background-color: #28a745; /* Green */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    
+        &:hover {
+          background-color: #218838; /* Darker green */
+        }
+      }
+    }
+    
+  }
+  

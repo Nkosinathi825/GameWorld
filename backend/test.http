@@ -2,8 +2,8 @@ POST http://localhost:5000/saveGame
 Content-Type: application/json
 
 {
-    "user_id":"000000100000",
+    "user_id":"66ecee14f0d592d9c7eab105",
     "level": "Easy",
-    "timeOfCompletion": "5 minutes",
+    "timeOfCompletion": "18",
     "gameName": "Sudoku"
 }

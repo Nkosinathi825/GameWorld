@@ -1,32 +1,31 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const snakeGameSchema = new mongoose.Schema({
     user_id: {
         type: String,
         required: true,
-        unique: true,
     },
     level: {
         type: String,
         required: true,
     },
-    timeOfCompletion: { 
-        type: String,
+    score: {
+        type: Number, // Change to Number if score is a numeric value
         required: true,
     },
     date: {
         type: Date,
         required: true,
-        default: Date.now, 
+        default: Date.now,
     },
     gameName: {
         type: String,
         required: true,
     }
 }, {
-    timestamps: true, 
+    timestamps: true,
 });
 
-const Game = mongoose.model('Game', userSchema); 
+const Snake = mongoose.models.Snake || mongoose.model('Snake', snakeGameSchema);
 
-module.exports = Game;
+module.exports = Snake;
