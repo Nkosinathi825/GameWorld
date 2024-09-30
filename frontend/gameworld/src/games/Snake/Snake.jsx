@@ -76,7 +76,8 @@ export default function Snake() {
     setTimeout(() => {
         handleReset();
         setGameStatus(false);
-    }, 3000);  
+        saveGame()
+    }, 5000);  
 };
 
   const handlePause = () => {
