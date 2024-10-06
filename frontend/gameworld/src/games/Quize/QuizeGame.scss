@@ -246,6 +246,8 @@
   
     .winner-popup {
       position: fixed;
+      display: flex;
+      flex-direction: column;
       top: 50%;
       left: 60%;
       transform: translate(-50%, -50%);
