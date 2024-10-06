@@ -28,7 +28,7 @@ export default function QuizeGame() {
   
     const saveGame = async () => {
         try {
-          const response = await axios.post('http://localhost:5000/saveQuize', {
+          const response = await axios.post('http://localhost:5000/saveQuiz', {
             user_id: user.id,
             level: difficulty,
             score: score,
@@ -101,6 +101,7 @@ export default function QuizeGame() {
 
     const handleDifficultyChange = (level) => {
         setDifficulty(level);
+        handleReset()
         setPopupVisible(false);
     };
 

@@ -1,9 +1,9 @@
-POST http://localhost:5000/saveGame
+POST http://localhost:5000/saveQuiz
 Content-Type: application/json
 
 {
     "user_id":"66ecee14f0d592d9c7eab105",
     "level": "Easy",
-    "timeOfCompletion": "18",
-    "gameName": "Sudoku"
+    "score": "18",
+    "gameName": "Quize"
 }

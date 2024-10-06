@@ -21,7 +21,7 @@ export default function Snake() {
   
   const saveGame = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/saveSnake', {
+      const response = await axios.post('http://localh/saveQuizost:5000/saveSnake', {
         user_id: user.id,
         level: difficulty,
         score: score,
@@ -65,6 +65,7 @@ export default function Snake() {
   };
   const handleDifficultyChange = (level) => {
     setDifficulty(level); 
+    setGameStatus(true);
     setPopupVisible(false);
   };
 
