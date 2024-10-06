@@ -1,0 +1,344 @@
+{
+  "quiz": [
+    {
+      "question": "What is the largest organ in the human body?",
+      "options": [
+        "A) Liver",
+        "B) Brain",
+        "C) Skin",
+        "D) Heart"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "Which element has the chemical symbol 'Fe'?",
+      "options": [
+        "A) Gold",
+        "B) Silver",
+        "C) Iron",
+        "D) Lead"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "Who wrote the famous play 'Romeo and Juliet'?",
+      "options": [
+        "A) William Shakespeare",
+        "B) Charles Dickens",
+        "C) Mark Twain",
+        "D) Jane Austen"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which planet has the most moons?",
+      "options": [
+        "A) Earth",
+        "B) Mars",
+        "C) Saturn",
+        "D) Jupiter"
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "question": "What is the capital city of Canada?",
+      "options": [
+        "A) Vancouver",
+        "B) Toronto",
+        "C) Montreal",
+        "D) Ottawa"
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "question": "Which gas is most abundant in the Earth's atmosphere?",
+      "options": [
+        "A) Oxygen",
+        "B) Nitrogen",
+        "C) Carbon Dioxide",
+        "D) Argon"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "Who painted the ceiling of the Sistine Chapel?",
+      "options": [
+        "A) Raphael",
+        "B) Michelangelo",
+        "C) Leonardo da Vinci",
+        "D) Caravaggio"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "What is the currency used in Japan?",
+      "options": [
+        "A) Yen",
+        "B) Yuan",
+        "C) Won",
+        "D) Dollar"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "What is the primary language spoken in Brazil?",
+      "options": [
+        "A) Spanish",
+        "B) French",
+        "C) Portuguese",
+        "D) English"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "Which instrument has 88 keys?",
+      "options": [
+        "A) Guitar",
+        "B) Flute",
+        "C) Piano",
+        "D) Violin"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "What is the capital of New Zealand?",
+      "options": [
+        "A) Auckland",
+        "B) Wellington",
+        "C) Christchurch",
+        "D) Hamilton"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "In which year did the Titanic sink?",
+      "options": [
+        "A) 1910",
+        "B) 1912",
+        "C) 1914",
+        "D) 1920"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "Which famous scientist developed the theory of relativity?",
+      "options": [
+        "A) Isaac Newton",
+        "B) Albert Einstein",
+        "C) Galileo Galilei",
+        "D) Stephen Hawking"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "What is the hardest natural substance on Earth?",
+      "options": [
+        "A) Quartz",
+        "B) Diamond",
+        "C) Sapphire",
+        "D) Topaz"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "What is the longest river in the world?",
+      "options": [
+        "A) Amazon River",
+        "B) Nile River",
+        "C) Yangtze River",
+        "D) Mississippi River"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "Which gas do plants take in during photosynthesis?",
+      "options": [
+        "A) Oxygen",
+        "B) Nitrogen",
+        "C) Carbon Dioxide",
+        "D) Hydrogen"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "Which country is known as the Land of the Rising Sun?",
+      "options": [
+        "A) China",
+        "B) Japan",
+        "C) South Korea",
+        "D) Thailand"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "What is the chemical formula for table salt?",
+      "options": [
+        "A) NaCl",
+        "B) KCl",
+        "C) NaHCO3",
+        "D) CaCl2"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "In which continent is the Sahara Desert located?",
+      "options": [
+        "A) Asia",
+        "B) Australia",
+        "C) Africa",
+        "D) North America"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "What is the main language spoken in Egypt?",
+      "options": [
+        "A) Arabic",
+        "B) English",
+        "C) French",
+        "D) Spanish"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which famous physicist is known for his laws of motion?",
+      "options": [
+        "A) Isaac Newton",
+        "B) Albert Einstein",
+        "C) Niels Bohr",
+        "D) Nikola Tesla"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which planet is closest to the Sun?",
+      "options": [
+        "A) Venus",
+        "B) Earth",
+        "C) Mercury",
+        "D) Mars"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "What is the capital of Australia?",
+      "options": [
+        "A) Sydney",
+        "B) Canberra",
+        "C) Melbourne",
+        "D) Brisbane"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "Who wrote 'Pride and Prejudice'?",
+      "options": [
+        "A) Emily Brontë",
+        "B) Jane Austen",
+        "C) Charles Dickens",
+        "D) George Eliot"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "What is the primary ingredient in hummus?",
+      "options": [
+        "A) Chickpeas",
+        "B) Lentils",
+        "C) Beans",
+        "D) Peas"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which ocean is the largest?",
+      "options": [
+        "A) Atlantic Ocean",
+        "B) Indian Ocean",
+        "C) Arctic Ocean",
+        "D) Pacific Ocean"
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "question": "What is the capital of Italy?",
+      "options": [
+        "A) Rome",
+        "B) Venice",
+        "C) Florence",
+        "D) Milan"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which animal is known as the 'Ship of the Desert'?",
+      "options": [
+        "A) Horse",
+        "B) Camel",
+        "C) Donkey",
+        "D) Elephant"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "What is the smallest prime number?",
+      "options": [
+        "A) 0",
+        "B) 1",
+        "C) 2",
+        "D) 3"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "Which planet is known for its rings?",
+      "options": [
+        "A) Earth",
+        "B) Saturn",
+        "C) Jupiter",
+        "D) Mars"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "Which famous scientist formulated the laws of heredity?",
+      "options": [
+        "A) Charles Darwin",
+        "B) Gregor Mendel",
+        "C) Louis Pasteur",
+        "D) Albert Einstein"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "What is the largest land animal?",
+      "options": [
+        "A) Lion",
+        "B) Elephant",
+        "C) Giraffe",
+        "D) Hippopotamus"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "Which is the longest river in North America?",
+      "options": [
+        "A) Mississippi River",
+        "B) Missouri River",
+        "C) Colorado River",
+        "D) Yukon River"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "What is the main ingredient in beer?",
+      "options": [
+        "A) Water",
+        "B) Yeast",
+        "C) Barley",
+        "D) Hops"
+      ],
+      "correct_answer": "C"
+    }
+  ]
+}

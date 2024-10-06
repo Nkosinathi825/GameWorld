@@ -1,0 +1,475 @@
+{
+    "quiz": [
+      {
+        "question": "What is the capital of France?",
+        "options": [
+          "A) Paris",
+          "B) London",
+          "C) Rome",
+          "D) Madrid"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which planet is known as the Red Planet?",
+        "options": [
+          "A) Earth",
+          "B) Mars",
+          "C) Jupiter",
+          "D) Saturn"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the largest mammal in the world?",
+        "options": [
+          "A) Elephant",
+          "B) Blue Whale",
+          "C) Giraffe",
+          "D) Polar Bear"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "Which is the smallest continent?",
+        "options": [
+          "A) Asia",
+          "B) Europe",
+          "C) Australia",
+          "D) Antarctica"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the chemical symbol for water?",
+        "options": [
+          "A) O2",
+          "B) CO2",
+          "C) H2O",
+          "D) NaCl"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "Who wrote the play 'Romeo and Juliet'?",
+        "options": [
+          "A) Charles Dickens",
+          "B) Mark Twain",
+          "C) William Shakespeare",
+          "D) Leo Tolstoy"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the largest organ in the human body?",
+        "options": [
+          "A) Heart",
+          "B) Skin",
+          "C) Liver",
+          "D) Lungs"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "How many continents are there?",
+        "options": [
+          "A) 5",
+          "B) 6",
+          "C) 7",
+          "D) 8"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the capital of Japan?",
+        "options": [
+          "A) Tokyo",
+          "B) Seoul",
+          "C) Beijing",
+          "D) Bangkok"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What gas do plants absorb from the atmosphere?",
+        "options": [
+          "A) Oxygen",
+          "B) Carbon Dioxide",
+          "C) Nitrogen",
+          "D) Helium"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the main ingredient in guacamole?",
+        "options": [
+          "A) Tomato",
+          "B) Avocado",
+          "C) Onion",
+          "D) Pepper"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the square root of 64?",
+        "options": [
+          "A) 6",
+          "B) 7",
+          "C) 8",
+          "D) 9"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "In which country is the Great Pyramid of Giza located?",
+        "options": [
+          "A) Iran",
+          "B) Egypt",
+          "C) Iraq",
+          "D) Turkey"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the hardest natural substance on Earth?",
+        "options": [
+          "A) Gold",
+          "B) Iron",
+          "C) Diamond",
+          "D) Quartz"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "Which element has the chemical symbol 'O'?",
+        "options": [
+          "A) Oxygen",
+          "B) Gold",
+          "C) Silver",
+          "D) Iron"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the freezing point of water?",
+        "options": [
+          "A) 0°C",
+          "B) 32°F",
+          "C) 100°C",
+          "D) 212°F"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the tallest mountain in the world?",
+        "options": [
+          "A) K2",
+          "B) Kangchenjunga",
+          "C) Mount Everest",
+          "D) Lhotse"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "Which animal is known as the 'King of the Jungle'?",
+        "options": [
+          "A) Tiger",
+          "B) Lion",
+          "C) Elephant",
+          "D) Cheetah"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is 10 + 5?",
+        "options": [
+          "A) 12",
+          "B) 13",
+          "C) 14",
+          "D) 15"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "Which planet is known for its rings?",
+        "options": [
+          "A) Earth",
+          "B) Jupiter",
+          "C) Saturn",
+          "D) Neptune"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the smallest planet in our solar system?",
+        "options": [
+          "A) Mercury",
+          "B) Mars",
+          "C) Venus",
+          "D) Earth"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the largest continent?",
+        "options": [
+          "A) Africa",
+          "B) Asia",
+          "C) Europe",
+          "D) Antarctica"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "Which fruit is known for having its seeds on the outside?",
+        "options": [
+          "A) Banana",
+          "B) Strawberry",
+          "C) Kiwi",
+          "D) Blueberry"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the currency of Japan?",
+        "options": [
+          "A) Yen",
+          "B) Dollar",
+          "C) Won",
+          "D) Euro"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the chemical formula for table salt?",
+        "options": [
+          "A) NaCl",
+          "B) KCl",
+          "C) CaCl2",
+          "D) NaOH"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which animal is known for its ability to change colors?",
+        "options": [
+          "A) Chameleon",
+          "B) Tiger",
+          "C) Frog",
+          "D) Eagle"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the primary language spoken in Spain?",
+        "options": [
+          "A) Spanish",
+          "B) French",
+          "C) Portuguese",
+          "D) Italian"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is 5 x 6?",
+        "options": [
+          "A) 30",
+          "B) 25",
+          "C) 35",
+          "D) 40"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which ocean is the largest?",
+        "options": [
+          "A) Atlantic Ocean",
+          "B) Indian Ocean",
+          "C) Arctic Ocean",
+          "D) Pacific Ocean"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "Which is the largest desert in the world?",
+        "options": [
+          "A) Sahara Desert",
+          "B) Arabian Desert",
+          "C) Gobi Desert",
+          "D) Kalahari Desert"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the boiling point of water?",
+        "options": [
+          "A) 50°C",
+          "B) 75°C",
+          "C) 100°C",
+          "D) 150°C"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the main ingredient in bread?",
+        "options": [
+          "A) Flour",
+          "B) Sugar",
+          "C) Salt",
+          "D) Water"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Who painted the Mona Lisa?",
+        "options": [
+          "A) Vincent van Gogh",
+          "B) Pablo Picasso",
+          "C) Leonardo da Vinci",
+          "D) Claude Monet"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the capital city of Australia?",
+        "options": [
+          "A) Sydney",
+          "B) Melbourne",
+          "C) Canberra",
+          "D) Brisbane"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the largest ocean on Earth?",
+        "options": [
+          "A) Atlantic",
+          "B) Indian",
+          "C) Arctic",
+          "D) Pacific"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "What is the name of the fairy in Peter Pan?",
+        "options": [
+          "A) Tinkerbell",
+          "B) Cinderella",
+          "C) Aurora",
+          "D) Ariel"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is 12 divided by 4?",
+        "options": [
+          "A) 2",
+          "B) 3",
+          "C) 4",
+          "D) 5"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the color of the sky on a clear day?",
+        "options": [
+          "A) Blue",
+          "B) Green",
+          "C) Yellow",
+          "D) Red"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which gas do we breathe in?",
+        "options": [
+          "A) Carbon Dioxide",
+          "B) Oxygen",
+          "C) Nitrogen",
+          "D) Helium"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "How many legs does a spider have?",
+        "options": [
+          "A) 6",
+          "B) 8",
+          "C) 10",
+          "D) 12"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "Which day comes after Monday?",
+        "options": [
+          "A) Saturday",
+          "B) Sunday",
+          "C) Tuesday",
+          "D) Wednesday"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the main ingredient in sushi?",
+        "options": [
+          "A) Rice",
+          "B) Noodles",
+          "C) Bread",
+          "D) Potatoes"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What color is an emerald?",
+        "options": [
+          "A) Red",
+          "B) Blue",
+          "C) Green",
+          "D) Yellow"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the capital of Italy?",
+        "options": [
+          "A) Rome",
+          "B) Paris",
+          "C) Berlin",
+          "D) Madrid"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is 20% of 100?",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 40"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "Which animal is known as man's best friend?",
+        "options": [
+          "A) Cat",
+          "B) Dog",
+          "C) Rabbit",
+          "D) Hamster"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the fastest land animal?",
+        "options": [
+          "A) Cheetah",
+          "B) Lion",
+          "C) Horse",
+          "D) Elephant"
+        ],
+        "correct_answer": "A"
+      }
+    ]
+  }
+  

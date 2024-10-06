@@ -1,0 +1,54 @@
+{
+  "quiz": [
+    {
+      "question": "Which physicist is credited with developing quantum electrodynamics (QED)?",
+      "options": [
+        "A) Richard Feynman",
+        "B) Niels Bohr",
+        "C) Max Planck",
+        "D) Erwin Schrödinger"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "What is the rarest naturally occurring element on Earth?",
+      "options": [
+        "A) Astatine",
+        "B) Francium",
+        "C) Technetium",
+        "D) Radon"
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "question": "Which mathematical conjecture, proposed by Pierre de Fermat, remained unsolved for over 350 years until 1994?",
+      "options": [
+        "A) Goldbach's Conjecture",
+        "B) Poincaré Conjecture",
+        "C) Fermat's Last Theorem",
+        "D) Riemann Hypothesis"
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "question": "In what year did the Byzantine Empire fall with the capture of Constantinople?",
+      "options": [
+        "A) 1204",
+        "B) 1453",
+        "C) 1492",
+        "D) 1517"
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "question": "Which philosopher is known for the quote, 'I think, therefore I am'?",
+      "options": [
+        "A) Immanuel Kant",
+        "B) René Descartes",
+        "C) Friedrich Nietzsche",
+        "D) Aristotle"
+      ],
+      "correct_answer": "B"
+    }
+  ]
+}

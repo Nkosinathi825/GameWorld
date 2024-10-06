@@ -1,0 +1,475 @@
+{
+    "quiz": [
+      {
+        "question": "What is the Riemann Hypothesis?",
+        "options": [
+          "A) A theory about the distribution of prime numbers",
+          "B) A theory about the curvature of space",
+          "C) A hypothesis on the nature of light",
+          "D) A theory about gravity"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the Heisenberg Uncertainty Principle?",
+        "options": [
+          "A) You cannot simultaneously know the position and momentum of a particle",
+          "B) You cannot know the past and future of a system",
+          "C) You cannot measure time without affecting it",
+          "D) You cannot determine the energy and time of a system"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the capital of Bhutan?",
+        "options": [
+          "A) Thimphu",
+          "B) Paro",
+          "C) Jakar",
+          "D) Phuentsholing"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which physicist is known for his work on quantum mechanics?",
+        "options": [
+          "A) Albert Einstein",
+          "B) Niels Bohr",
+          "C) Richard Feynman",
+          "D) Isaac Newton"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is Gödel's Incompleteness Theorem?",
+        "options": [
+          "A) There are true statements that cannot be proven",
+          "B) Every mathematical statement is provable",
+          "C) All algorithms can be computed",
+          "D) Mathematics is complete and consistent"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Who formulated the laws of planetary motion?",
+        "options": [
+          "A) Isaac Newton",
+          "B) Johannes Kepler",
+          "C) Galileo Galilei",
+          "D) Nicolaus Copernicus"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "Which battle is considered the turning point of the American Civil War?",
+        "options": [
+          "A) Battle of Antietam",
+          "B) Battle of Gettysburg",
+          "C) Battle of Bull Run",
+          "D) Battle of Vicksburg"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the Schrödinger equation?",
+        "options": [
+          "A) A formula that describes how the quantum state of a physical system changes over time",
+          "B) A mathematical model for black holes",
+          "C) A principle of relativity",
+          "D) An equation of motion for classical mechanics"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the origin of the name 'sodium'?",
+        "options": [
+          "A) From the Latin word 'natron'",
+          "B) From the Greek word 'soda'",
+          "C) From the Arabic word 'suda'",
+          "D) From the French word 'soude'"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the significance of the Treaty of Westphalia?",
+        "options": [
+          "A) Ended the Thirty Years' War in Europe",
+          "B) Established the United Nations",
+          "C) Ended the American Revolution",
+          "D) Established the European Union"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the P vs NP problem?",
+        "options": [
+          "A) A question about whether every problem whose solution can be verified quickly can also be solved quickly",
+          "B) A mathematical proof about prime numbers",
+          "C) A computer algorithm for sorting",
+          "D) A theory about randomness in computation"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the meaning of 'tabula rasa'?",
+        "options": [
+          "A) Blank slate",
+          "B) Rough draft",
+          "C) Final version",
+          "D) Perfect plan"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Who was the first female Nobel laureate?",
+        "options": [
+          "A) Marie Curie",
+          "B) Rosalind Franklin",
+          "C) Jane Addams",
+          "D) Dorothy Crowfoot Hodgkin"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the historical significance of the Magna Carta?",
+        "options": [
+          "A) Limited the power of the king and established the principle of due process",
+          "B) Established the Church of England",
+          "C) Ended the feudal system in England",
+          "D) Created the Parliament of England"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is Euler's formula in complex analysis?",
+        "options": [
+          "A) e^(ix) = cos(x) + i*sin(x)",
+          "B) e^(x) = x^n",
+          "C) a^2 + b^2 = c^2",
+          "D) F = ma"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the primary component of natural gas?",
+        "options": [
+          "A) Ethylene",
+          "B) Methane",
+          "C) Propylene",
+          "D) Butane"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "Which philosopher is known for the statement 'I think, therefore I am'?",
+        "options": [
+          "A) Friedrich Nietzsche",
+          "B) René Descartes",
+          "C) Socrates",
+          "D) John Locke"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the Fibonacci sequence?",
+        "options": [
+          "A) A sequence where each number is the sum of the two preceding ones",
+          "B) A sequence of prime numbers",
+          "C) A geometric progression",
+          "D) A set of rational numbers"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the largest moon of Saturn?",
+        "options": [
+          "A) Titan",
+          "B) Enceladus",
+          "C) Rhea",
+          "D) Iapetus"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What was the main focus of the Enlightenment?",
+        "options": [
+          "A) Reason, science, and individualism",
+          "B) Religion and tradition",
+          "C) Feudalism and monarchy",
+          "D) Art and aesthetics"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Who wrote 'The Republic'?",
+        "options": [
+          "A) Plato",
+          "B) Aristotle",
+          "C) Socrates",
+          "D) Cicero"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the significance of the Rosetta Stone?",
+        "options": [
+          "A) Key to understanding Egyptian hieroglyphics",
+          "B) A record of ancient Roman laws",
+          "C) A historical account of the Crusades",
+          "D) An artifact from the Renaissance"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which theorem states that in any right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides?",
+        "options": [
+          "A) Pythagorean theorem",
+          "B) Fermat's Last Theorem",
+          "C) Triangle inequality theorem",
+          "D) Law of Cosines"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the primary function of ribosomes in a cell?",
+        "options": [
+          "A) Protein synthesis",
+          "B) DNA replication",
+          "C) Energy production",
+          "D) Cell division"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the main language spoken in Brazil?",
+        "options": [
+          "A) Spanish",
+          "B) Portuguese",
+          "C) English",
+          "D) French"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "Which novel begins with the line 'Call me Ishmael'?",
+        "options": [
+          "A) Moby Dick",
+          "B) Great Expectations",
+          "C) 1984",
+          "D) Brave New World"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the focus of the field of ethology?",
+        "options": [
+          "A) Animal behavior",
+          "B) Human psychology",
+          "C) Plant biology",
+          "D) Marine ecology"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the primary purpose of the International Space Station?",
+        "options": [
+          "A) Research and development in microgravity",
+          "B) A hub for launching satellites",
+          "C) A military base in space",
+          "D) An observation platform for Earth"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What did the Sumerians invent that is considered the first form of writing?",
+        "options": [
+          "A) Hieroglyphics",
+          "B) Cuneiform",
+          "C) Latin",
+          "D) Chinese characters"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the main idea behind Darwin's theory of natural selection?",
+        "options": [
+          "A) Survival of the fittest",
+          "B) Creationism",
+          "C) Inheritance of acquired characteristics",
+          "D) Punctuated equilibrium"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which scientist is known for the discovery of the structure of DNA?",
+        "options": [
+          "A) Gregor Mendel",
+          "B) James Watson and Francis Crick",
+          "C) Charles Darwin",
+          "D) Louis Pasteur"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the main focus of cognitive psychology?",
+        "options": [
+          "A) Mental processes such as perception, memory, and problem-solving",
+          "B) Behavior and its relationship to the environment",
+          "C) Developmental stages throughout life",
+          "D) Biological bases of behavior"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which historical document proclaimed the freedom of the serfs in Russia?",
+        "options": [
+          "A) The Emancipation Reform of 1861",
+          "B) The Magna Carta",
+          "C) The Declaration of Independence",
+          "D) The Treaty of Versailles"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What does the term 'zeitgeist' mean?",
+        "options": [
+          "A) The spirit of the age or the general cultural, intellectual, and political climate",
+          "B) A form of existentialism",
+          "C) A scientific principle",
+          "D) A philosophy of time"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the main focus of structuralism in literature?",
+        "options": [
+          "A) Analyzing the structure of texts",
+          "B) Understanding historical context",
+          "C) Exploring character development",
+          "D) Focusing on reader response"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Who is known as the father of psychoanalysis?",
+        "options": [
+          "A) Sigmund Freud",
+          "B) Carl Jung",
+          "C) Ivan Pavlov",
+          "D) B.F. Skinner"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which mathematician is known for his work on set theory?",
+        "options": [
+          "A) Georg Cantor",
+          "B) David Hilbert",
+          "C) Kurt Gödel",
+          "D) Leonhard Euler"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which 20th-century novel begins with the line 'It was the best of times, it was the worst of times'?",
+        "options": [
+          "A) A Tale of Two Cities",
+          "B) 1984",
+          "C) Brave New World",
+          "D) The Great Gatsby"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the term for the fear of long words?",
+        "options": [
+          "A) Hippopotomonstrosesquippedaliophobia",
+          "B) Sesquipedalophobia",
+          "C) Logophobia",
+          "D) Phonophobia"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which philosopher is associated with the concept of the 'social contract'?",
+        "options": [
+          "A) Thomas Hobbes",
+          "B) John Locke",
+          "C) Jean-Jacques Rousseau",
+          "D) Karl Marx"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the significance of the Turing Test?",
+        "options": [
+          "A) It assesses a machine's ability to exhibit intelligent behavior equivalent to a human",
+          "B) It measures the speed of computers",
+          "C) It determines the efficiency of algorithms",
+          "D) It tests the memory capacity of machines"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "Which ancient civilization is known for developing cuneiform writing?",
+        "options": [
+          "A) Egyptians",
+          "B) Sumerians",
+          "C) Phoenicians",
+          "D) Indus Valley Civilization"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "What is the most widely used programming language in the world?",
+        "options": [
+          "A) Python",
+          "B) Java",
+          "C) JavaScript",
+          "D) C++"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "What is the main difference between classical and quantum physics?",
+        "options": [
+          "A) Classical physics deals with macroscopic phenomena; quantum physics deals with microscopic phenomena",
+          "B) Classical physics involves gravity; quantum physics does not",
+          "C) Classical physics is deterministic; quantum physics is probabilistic",
+          "D) Both A and C"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "Which mathematician is known for the concept of infinity?",
+        "options": [
+          "A) Georg Cantor",
+          "B) Isaac Newton",
+          "C) Carl Friedrich Gauss",
+          "D) Pythagoras"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What is the primary goal of behavioral economics?",
+        "options": [
+          "A) To understand the effects of psychological factors on economic decision-making",
+          "B) To create mathematical models of markets",
+          "C) To study historical economic trends",
+          "D) To develop algorithms for stock trading"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "What does 'entropy' measure in a thermodynamic system?",
+        "options": [
+          "A) The amount of disorder or randomness",
+          "B) The energy available to do work",
+          "C) The temperature of a system",
+          "D) The pressure of a gas"
+        ],
+        "correct_answer": "A"
+      }
+    ]
+  }
+  

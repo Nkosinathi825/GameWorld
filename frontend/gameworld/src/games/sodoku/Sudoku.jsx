@@ -133,7 +133,7 @@ const Sudoku = () => {
 
   const handleClosePopup = () => {
     setWinnerPopupVisible(false);
-    handleReset(); // Optionally reset the game
+    handleReset();
   };
 
   return (
