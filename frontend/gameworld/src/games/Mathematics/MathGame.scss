@@ -1,6 +1,272 @@
-.MathGame-conatainer{
+.MathsGame-container {
     width: 100%;
     height: 100%;
-    background-color: black;
-    color: white;
-}
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    .Maths-header {
+      margin-top: -15px;
+      width: 100%;
+      height: 10%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: #333;
+  
+      .title {
+        flex: 20;
+        display: flex;
+        justify-content: center;
+        font-size: 1.8rem; // Increased font size
+        font-weight: bold;
+        color: #4a4a4a; // Darker gray for better contrast
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); // Subtle shadow
+      }
+  
+      .options {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        .popup-menu {
+          position: absolute;
+          right: 0;
+          top: 30px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          z-index: 10;
+          padding: 0.5rem 0;
+          width: 150px;
+  
+          ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+  
+            li {
+              padding: 0.75rem 1rem;
+              color: #333;
+              cursor: pointer;
+              transition: background-color 0.3s, transform 0.2s;
+  
+              &:hover {
+                background-color: #e0e7ff; // Lighter hover color
+                transform: scale(1.02); // Slight scale effect
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .Maths-body {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 80%;
+  
+      .Maths-status {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem; // Increased gap
+  
+        .outer-circle {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background-color: #ffeb3b; 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); // Added shadow
+  
+          .inner-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #282c34;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem; // Increased font size
+            font-weight: bold; // Bolder text
+          }
+        }
+      }
+  
+      .Maths-content {
+        width: 80%;
+        padding: 10px;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+  
+        .Maths-board {
+          width: 80%;
+          height: 100%;
+          gap: 5%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          background-color: #ffffff; 
+          border: 2px solid #ccc;
+          border-radius: 15px; 
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
+          .questions {
+                width: 100%;
+                height: 60%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                span{
+                    width: 90%;
+                    height: 90%;
+                    border: 2px solid #ccc;  
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #e3f2fd; 
+                    color:black; 
+                    font-size: 4rem; 
+                }
+          }
+  
+          .answers {
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+              input{
+                width: 50%;
+                height: 100%;
+                border: 2px solid #ccc;
+                display: flex;
+                align-items: center; 
+                justify-content: center;
+                border-radius: 15px;
+                outline: none;
+                font-size: 3rem;
+                text-align: center;
+                padding: 10px;
+                box-sizing: border-box; 
+                transition: transform 0.2s, box-shadow 0.2s;
+                &:hover {
+                  transform: scale(1.01);
+                  cursor: pointer;
+                  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+                }
+                &::placeholder{
+                  color: #888; 
+                  opacity: 1; 
+                  transition: opacity 0.3s ease; 
+                  font-size: 2rem;
+                }
+                &:focus::placeholder{
+                  opacity: 0;
+                }
+            }
+          }
+        }
+      }
+    }
+  
+    .Maths-end {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      width: 100%;
+  
+      button {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        background-color: #007bff; 
+        border: 2px solid #0056b3; 
+        color: white;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin: 0 0.5rem;
+        transition: background-color 0.3s, transform 0.2s;
+  
+        &:hover {
+          background-color: #0056b3; 
+          transform: scale(1.05); 
+        }
+  
+        &:nth-child(2) {
+          background-color: #28a745; 
+          border: 2px solid #218838;
+  
+          &:hover {
+            background-color: #218838; 
+          }
+        }
+  
+        &:nth-child(3) {
+          background-color: #dc3545; 
+          border: 2px solid #c82333;
+  
+          &:hover {
+            background-color: #c82333; 
+          }
+        }
+      }
+    }
+  
+    .winner-popup {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      border: 2px solid #2196f3; 
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+      z-index: 1000;
+      text-align: center;
+  
+      h2 {
+        color: #2196f3; 
+        font-size: 1.8rem; 
+        margin-bottom: 15px; 
+      }
+  
+      button {
+        background-color: #28a745; 
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+  
+        &:hover {
+          background-color: #218838;
+          transform: scale(1.05); 
+        }
+      }
+    }
+  }
+  
