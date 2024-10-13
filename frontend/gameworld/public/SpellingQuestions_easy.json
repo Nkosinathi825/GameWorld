@@ -1,0 +1,14 @@
+{
+    "quiz": [
+      {
+        "question": "./beer.avif",
+        "options": [
+          "A) beer",
+          "B) bear",
+          "C) bere",
+          "D) baers"
+        ],
+        "correct_answer": "A"
+      }
+    ]
+}
