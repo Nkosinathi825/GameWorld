@@ -10,6 +10,9 @@ import quize3 from '../images/quize3.jpeg'
 import math1 from '../images/math1.jpg'
 import math2 from '../images/math2.avif'
 import math3 from '../images/math3.jpg'
+import spelling from  '../images/spelling.avif'
+import spelling1 from  '../images/spelling1.avif'
+import spelling2 from  '../images/spelling2.avif'
 import './TheGame.scss'
 
 
@@ -44,6 +47,12 @@ export default function TheGames() {
           images={[math1,math2,math3]}
           description="Mathematics game"
           link='/math'
+        />
+        <Card
+          title="Spelling"
+          images={[spelling,spelling1,spelling2]}
+          description="Spelling game"
+          link='/spelling'
         />
       </section>
        

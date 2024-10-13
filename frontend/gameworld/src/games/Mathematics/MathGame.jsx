@@ -5,7 +5,7 @@ import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../context/UserProvider';
 import axios from 'axios';
 
-export default function QuizGame() {
+export default function MathGame() {
     const [difficulty, setDifficulty] = useState('Easy');
     const [score, setScore] = useState(0);
     const [highscore, setHighScore] = useState(0);
