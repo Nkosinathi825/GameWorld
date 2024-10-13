@@ -1,14 +1,515 @@
 {
     "quiz": [
       {
-        "question": "./beer.avif",
+        "question": "./elephant.webp",
         "options": [
-          "A) beer",
-          "B) bear",
-          "C) bere",
-          "D) baers"
+          "A) Elefant",
+          "B) Elephant",
+          "C) Elaphant",
+          "D) Elefent"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./apple.jpg",
+        "options": [
+          "A) Aple",
+          "B) Apple",
+          "C) Apel",
+          "D) Appel"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./bee.webp",
+        "options": [
+          "A) Bee",
+          "B) Bea",
+          "C) Be",
+          "D) Bie"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./hammer.jpeg",
+        "options": [
+          "A) Hamer",
+          "B) Hammer",
+          "C) Hamr",
+          "D) Hammar"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./Icecream.jpg",
+        "options": [
+          "A) Isecream",
+          "B) Icecream",
+          "C) Ice cream",
+          "D) Icescream"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./dog.avif",
+        "options": [
+          "A) Dawg",
+          "B) Dog",
+          "C) Dogg",
+          "D) Dag"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./cat.webp",
+        "options": [
+          "A) Kat",
+          "B) Catt",
+          "C) Cat",
+          "D) Katt"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./banana.jpeg",
+        "options": [
+          "A) Bannana",
+          "B) Banana",
+          "C) Bananna",
+          "D) Banane"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./fish.avif",
+        "options": [
+          "A) Fishe",
+          "B) Fish",
+          "C) Phish",
+          "D) Fissh"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./car.jpg",
+        "options": [
+          "A) Kar",
+          "B) Car",
+          "C) Carr",
+          "D) Karr"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./sun.webp",
+        "options": [
+          "A) Sun",
+          "B) Sune",
+          "C) Sonn",
+          "D) Sunn"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./moon.avif",
+        "options": [
+          "A) Moon",
+          "B) Mune",
+          "C) Moone",
+          "D) Moan"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./hat.jpg",
+        "options": [
+          "A) Hat",
+          "B) Hatt",
+          "C) Haat",
+          "D) Haat"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./book.jpg",
+        "options": [
+          "A) Boock",
+          "B) Bock",
+          "C) Book",
+          "D) Boak"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./pen.jpg",
+        "options": [
+          "A) Pen",
+          "B) Penn",
+          "C) Pan",
+          "D) Pene"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./milk.webp",
+        "options": [
+          "A) Milk",
+          "B) Mulk",
+          "C) Milke",
+          "D) Malk"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./ball.avif",
+        "options": [
+          "A) Ball",
+          "B) Balll",
+          "C) Bal",
+          "D) Baal"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./chair.avif",
+        "options": [
+          "A) Chare",
+          "B) Chair",
+          "C) Chiar",
+          "D) Chiar"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./table.avif",
+        "options": [
+          "A) Table",
+          "B) Tabel",
+          "C) Tabble",
+          "D) Tabl"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./bread.avif",
+        "options": [
+          "A) Bredd",
+          "B) Braed",
+          "C) Bread",
+          "D) Bred"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./water.png",
+        "options": [
+          "A) Water",
+          "B) Watter",
+          "C) Waterr",
+          "D) Watar"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./shoe.png",
+        "options": [
+          "A) Shoe",
+          "B) Shooe",
+          "C) Sho",
+          "D) Show"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./tree.avif",
+        "options": [
+          "A) Tree",
+          "B) Treee",
+          "C) Tre",
+          "D) Trea"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./train.webp",
+        "options": [
+          "A) Train",
+          "B) Traine",
+          "C) Trane",
+          "D) Trayn"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./house.avif",
+        "options": [
+          "A) Hous",
+          "B) House",
+          "C) Hause",
+          "D) Hoouse"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./light.jpg",
+        "options": [
+          "A) Lite",
+          "B) Light",
+          "C) Ligth",
+          "D) Lighte"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./bird.avif",
+        "options": [
+          "A) Bird",
+          "B) Berd",
+          "C) Birde",
+          "D) Byrd"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./clock.avif",
+        "options": [
+          "A) Clok",
+          "B) Clock",
+          "C) Clokk",
+          "D) Cloak"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./bread.avif",
+        "options": [
+          "A) Braed",
+          "B) Bread",
+          "C) Brade",
+          "D) Brad"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./desk.avif",
+        "options": [
+          "A) Desk",
+          "B) Desck",
+          "C) Deske",
+          "D) Dask"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./phone.avif",
+        "options": [
+          "A) Phone",
+          "B) Phon",
+          "C) Fone",
+          "D) Phonne"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./computer.avif",
+        "options": [
+          "A) Computer",
+          "B) Computar",
+          "C) Computor",
+          "D) Compputer"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./pizza.avif",
+        "options": [
+          "A) Pizza",
+          "B) Piza",
+          "C) Pizze",
+          "D) Pissa"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./cake.avif",
+        "options": [
+          "A) Cak",
+          "B) Cake",
+          "C) Cacke",
+          "D) Caek"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./glass.avif",
+        "options": [
+          "A) Glas",
+          "B) Glass",
+          "C) Glasse",
+          "D) Glazz"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./pencil.avif",
+        "options": [
+          "A) Pensil",
+          "B) Pencil",
+          "C) Pencel",
+          "D) Pensl"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./paper.avif",
+        "options": [
+          "A) Papor",
+          "B) Paper",
+          "C) Papper",
+          "D) Papor"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./cup.avif",
+        "options": [
+          "A) Cup",
+          "B) Capp",
+          "C) Cupp",
+          "D) Cuppe"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./leaf.avif",
+        "options": [
+          "A) Leaf",
+          "B) Leef",
+          "C) Leafe",
+          "D) Leif"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./cow.avif",
+        "options": [
+          "A) Cowe",
+          "B) Cow",
+          "C) Cou",
+          "D) Couw"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./lion.avif",
+        "options": [
+          "A) Lione",
+          "B) Loin",
+          "C) Lion",
+          "D) Lyon"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./frog.avif",
+        "options": [
+          "A) Frogg",
+          "B) Froge",
+          "C) Frog",
+          "D) Froge"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./boat.avif",
+        "options": [
+          "A) Boat",
+          "B) Bot",
+          "C) Boot",
+          "D) Bote"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./fork.avif",
+        "options": [
+          "A) Fork",
+          "B) Forc",
+          "C) Forke",
+          "D) Fark"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./bicycle.avif",
+        "options": [
+          "A) Bicycel",
+          "B) Bicycle",
+          "C) Bicycl",
+          "D) Bycicle"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./duck.avif",
+        "options": [
+          "A) Duc",
+          "B) Duck",
+          "C) Duk",
+          "D) Dook"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./socks.avif",
+        "options": [
+          "A) Socks",
+          "B) Sokes",
+          "C) Sockes",
+          "D) Sox"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./hand.avif",
+        "options": [
+          "A) Hand",
+          "B) Hande",
+          "C) Haand",
+          "D) Hond"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./bag.avif",
+        "options": [
+          "A) Bag",
+          "B) Baag",
+          "C) Bagg",
+          "D) Bagge"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./plate.avif",
+        "options": [
+          "A) Plat",
+          "B) Plate",
+          "C) Plaet",
+          "D) Plait"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./shirt.avif",
+        "options": [
+          "A) Shirt",
+          "B) Shert",
+          "C) Shrt",
+          "D) Shurt"
         ],
         "correct_answer": "A"
       }
     ]
-}
+  }
+  
