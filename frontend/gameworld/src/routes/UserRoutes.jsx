@@ -7,6 +7,7 @@ import TheGames from "../pages/TheGames";
 import QuizeGame from "../games/Quize/QuizeGame";
 import MathGame from "../games/Mathematics/MathGame";
 import SpellingGame from "../games/SpellingGame/SpellingGame";
+import Memory from "../games/Memory/Memory";
 
 function UserRoutes() {
   return (
@@ -64,6 +65,14 @@ function UserRoutes() {
         element={
           <ProtectedRoute>
             <SpellingGame/>
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/memory" 
+        element={
+          <ProtectedRoute>
+            <Memory/>
           </ProtectedRoute>
         } 
       />

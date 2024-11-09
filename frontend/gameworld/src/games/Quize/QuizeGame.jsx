@@ -22,7 +22,7 @@ export default function QuizeGame() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [timer, setTimer] = useState(60);
     const { user } = useContext(UserContext);
-    const [gameName] = useState("Snake");
+    const [gameName] = useState("Quiz");
     const images = [a, b, c, d];
 
   

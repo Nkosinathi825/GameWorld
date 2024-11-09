@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Card = ({ title,  images = [], description, link}) => {
+const Card = ({ title,  images = [],link}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -23,7 +23,6 @@ const Card = ({ title,  images = [], description, link}) => {
         </section>
         <div className="card-content">
           <h2 className="card-title">{title}</h2>
-          <p className="card-description">{description}</p>
         </div>
       </Link>
     </div>

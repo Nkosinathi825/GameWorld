@@ -13,6 +13,9 @@ import math3 from '../images/math3.jpg'
 import spelling from  '../images/spelling.avif'
 import spelling1 from  '../images/spelling1.avif'
 import spelling2 from  '../images/spelling2.avif'
+import memory from  '../images/memory.webp'
+import memory1 from  '../images/memory1.avif'
+import memory2 from  '../images/memory2.jpg'
 import './TheGame.scss'
 
 
@@ -27,32 +30,32 @@ export default function TheGames() {
         <Card
           title="Sudoku"
           images={[sudoku1,sudoku2]}
-          description="Sudoku a number game."
           link='/sudoku'
         />
          <Card
-          title="Snake"
+          title="Snake Game"
           images={[snake1,snake2]}
-          description="Snake game."
           link='/snake'
         />
         <Card
-          title="Quiz"
+          title="Quiz Game"
           images={[quize1,quize2,quize3]}
-          description="Quiz game."
           link='/quize'
         />
         <Card
-          title="Mathematics"
+          title="Mathematics  Game"
           images={[math1,math2,math3]}
-          description="Mathematics game"
           link='/math'
         />
         <Card
-          title="Spelling"
+          title="Spelling Game"
           images={[spelling,spelling1,spelling2]}
-          description="Spelling game"
           link='/spelling'
+        />
+          <Card
+          title="Memory game"
+          images={[memory,memory1,memory2]}
+          link='/memory'
         />
       </section>
        

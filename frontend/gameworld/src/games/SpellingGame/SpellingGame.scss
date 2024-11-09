@@ -112,6 +112,18 @@
         padding-left: 30px;
         display: flex;
         align-items: center;
+        .gamenot{
+          width: 80%;
+          height: 100%;
+          display: flex;
+
+          align-items: center;
+          justify-content: center;
+          p{
+              font-size: xx-large;
+      
+          }
+      }
   
         .Spelling-board {
           width: 80%;
@@ -141,7 +153,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background-color: #e3f2fd; 
+      
               color: #0d47a1; 
               font-size: 1.2rem;
                 img {

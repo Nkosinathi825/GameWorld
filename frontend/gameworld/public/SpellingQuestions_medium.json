@@ -1,0 +1,295 @@
+{
+    "quiz": [
+      {
+        "question": "./architecture.png",
+        "options": [
+          "A) Architechture",
+          "B) Architectchure",
+          "C) Architecture",
+          "D) Architexture"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./chandelier.avif",
+        "options": [
+          "A) Chandellier",
+          "B) Chandelier",
+          "C) Chandaleer",
+          "D) Chandelir"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./camouflage.jpg",
+        "options": [
+          "A) Camoflage",
+          "B) Camoflauge",
+          "C) Camouflage",
+          "D) Camoflog"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./connoisseur.webp",
+        "options": [
+          "A) Connoisseur",
+          "B) Connosieur",
+          "C) Connoissur",
+          "D) Conoisseur"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./rhythm.jpg",
+        "options": [
+          "A) Rythm",
+          "B) Rhythm",
+          "C) Rhythim",
+          "D) Rhytham"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./acquiesce.webp",
+        "options": [
+          "A) Acquiesse",
+          "B) Aqueisce",
+          "C) Acquiese",
+          "D) Acquiesce"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "./boulevard.avif",
+        "options": [
+          "A) Boulevard",
+          "B) Boulavard",
+          "C) Bullevard",
+          "D) Boulvard"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./liaison.jpg",
+        "options": [
+          "A) Liazon",
+          "B) Liason",
+          "C) Liasion",
+          "D) Liaison"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "./maneuver.webp",
+        "options": [
+          "A) Maneauver",
+          "B) Manuever",
+          "C) Maneuver",
+          "D) Maneouver"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./silhouette.avif",
+        "options": [
+          "A) Silouette",
+          "B) Sillouette",
+          "C) Silhouette",
+          "D) Sillhouette"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./entrepreneur.png",
+        "options": [
+          "A) Entrepenur",
+          "B) Entreprenor",
+          "C) Entreprenur",
+          "D) Entrepreneur"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "./judgmental.webp",
+        "options": [
+          "A) Judgemental",
+          "B) Judgmental",
+          "C) Judgementle",
+          "D) Jugdmental"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./mischievous.webp",
+        "options": [
+          "A) Mischeivous",
+          "B) Mischievious",
+          "C) Mischievous",
+          "D) Mischivous"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./soliloquy.webp",
+        "options": [
+          "A) Solilquoy",
+          "B) Soliloquy",
+          "C) Soliloqy",
+          "D) Soliliquy"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./fluorescent.avif",
+        "options": [
+          "A) Fluorescent",
+          "B) Florescent",
+          "C) Fluorescint",
+          "D) Flourescent"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./irresistible.png",
+        "options": [
+          "A) Irresistable",
+          "B) Irresistablee",
+          "C) Irresistible",
+          "D) Irresisteble"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./privilege.avif",
+        "options": [
+          "A) Privelege",
+          "B) Priviledge",
+          "C) Privilege",
+          "D) Prevelige"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./recommend.jpeg",
+        "options": [
+          "A) Reccommend",
+          "B) Recommend",
+          "C) Recomend",
+          "D) Recomand"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./questionnaire.avif",
+        "options": [
+          "A) Questionare",
+          "B) Questionnair",
+          "C) Questionnaire",
+          "D) Quesionaire"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./subtle.png",
+        "options": [
+          "A) Suttle",
+          "B) Subtle",
+          "C) Subtile",
+          "D) Subtel"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./conscientious.avif",
+        "options": [
+          "A) Concientious",
+          "B) Conscientious",
+          "C) Consceintious",
+          "D) Consciencious"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./pronunciation.jpg",
+        "options": [
+          "A) Pronounciation",
+          "B) Prononciation",
+          "C) Pronunciation",
+          "D) Pronnunciation"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./psychology.jpg",
+        "options": [
+          "A) Pshycology",
+          "B) Psycology",
+          "C) Psichology",
+          "D) Psychology"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "./supersede.jpg",
+        "options": [
+          "A) Supersede",
+          "B) Supersceed",
+          "C) Supercede",
+          "D) Suppercide"
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "question": "./xylophone.jpg",
+        "options": [
+          "A) Xylofone",
+          "B) Xylophone",
+          "C) Xylopone",
+          "D) Xylofhone"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./yacht.jpg",
+        "options": [
+          "A) Yatch",
+          "B) Yacth",
+          "C) Yacht",
+          "D) Yaught"
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "question": "./deceive.webp",
+        "options": [
+          "A) Decieve",
+          "B) Deceeve",
+          "C) Decievee",
+          "D) Deceive"
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "question": "./consensus.avif",
+        "options": [
+          "A) Consencus",
+          "B) Consensus",
+          "C) Concessus",
+          "D) Conssensus"
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "question": "./bureaucracy.jpg",
+        "options": [
+          "A) Bureaucracy",
+          "B) Bureacracy",
+          "C) Beaurocracy",
+          "D) Bueracracy"
+        ],
+        "correct_answer": "A"
+      }
+    ]
+  }
+  

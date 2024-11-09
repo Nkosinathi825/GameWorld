@@ -261,7 +261,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./bird.avif",
+        "question": "bird.webp",
         "options": [
           "A) Bird",
           "B) Berd",
@@ -271,7 +271,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./clock.avif",
+        "question": "./clock.webp",
         "options": [
           "A) Clok",
           "B) Clock",
@@ -291,7 +291,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./desk.avif",
+        "question": "./Desk.png",
         "options": [
           "A) Desk",
           "B) Desck",
@@ -301,7 +301,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./phone.avif",
+        "question": "phone.jpg",
         "options": [
           "A) Phone",
           "B) Phon",
@@ -311,7 +311,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./computer.avif",
+        "question": "./computer.jpg",
         "options": [
           "A) Computer",
           "B) Computar",
@@ -341,7 +341,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./glass.avif",
+        "question": "./glass.jpeg",
         "options": [
           "A) Glas",
           "B) Glass",
@@ -351,7 +351,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./pencil.avif",
+        "question": "./pencil.jpg",
         "options": [
           "A) Pensil",
           "B) Pencil",
@@ -361,7 +361,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./paper.avif",
+        "question": "./paper.jpeg",
         "options": [
           "A) Papor",
           "B) Paper",
@@ -381,7 +381,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./leaf.avif",
+        "question": "./leaf.webp",
         "options": [
           "A) Leaf",
           "B) Leef",
@@ -391,7 +391,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./cow.avif",
+        "question": "./cow.webp",
         "options": [
           "A) Cowe",
           "B) Cow",
@@ -411,7 +411,7 @@
         "correct_answer": "C"
       },
       {
-        "question": "./frog.avif",
+        "question": "./frog.webp",
         "options": [
           "A) Frogg",
           "B) Froge",
@@ -421,7 +421,7 @@
         "correct_answer": "C"
       },
       {
-        "question": "./boat.avif",
+        "question": "./boat.webp",
         "options": [
           "A) Boat",
           "B) Bot",
@@ -441,7 +441,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./bicycle.avif",
+        "question": "./bicycle.jpeg",
         "options": [
           "A) Bicycel",
           "B) Bicycle",
@@ -451,7 +451,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./duck.avif",
+        "question": "./duck.webp",
         "options": [
           "A) Duc",
           "B) Duck",
@@ -461,7 +461,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./socks.avif",
+        "question": "./socks.jpg",
         "options": [
           "A) Socks",
           "B) Sokes",
@@ -471,7 +471,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./hand.avif",
+        "question": "./hand.jpg",
         "options": [
           "A) Hand",
           "B) Hande",
@@ -481,7 +481,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./bag.avif",
+        "question": "./bag.jpeg",
         "options": [
           "A) Bag",
           "B) Baag",
@@ -501,7 +501,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./shirt.avif",
+        "question": "./shirt.jpeg",
         "options": [
           "A) Shirt",
           "B) Shert",

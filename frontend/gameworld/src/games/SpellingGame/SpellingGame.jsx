@@ -182,7 +182,7 @@ export default function SpellingGame() {
                             <p>Click Enter to continue.</p>
                         </div>
                     ) : (
-                        questions.length > 0 && (
+                        isRunning && questions.length > 0 ? (
                             <section className='Spelling-board'  >
                                 <section className='questions'>
                                     <p><img src={questions[currentQuestionIndex].question} alt="" /></p>
@@ -203,6 +203,8 @@ export default function SpellingGame() {
                                     ))}
                                 </section>
                             </section>
+                        ):(
+                            <section className='gamenot'><p>Click "Start" to begin the game</p></section>
                         )
                     )}
                 </section>
