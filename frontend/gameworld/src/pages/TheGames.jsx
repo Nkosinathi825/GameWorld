@@ -16,6 +16,9 @@ import spelling2 from  '../images/spelling2.avif'
 import memory from  '../images/memory.webp'
 import memory1 from  '../images/memory1.avif'
 import memory2 from  '../images/memory2.jpg'
+import mole from  '../images/mole.jpg'
+import mole1 from  '../images/mole1.jpg'
+import mole2 from  '../images/mole2.jpg'
 import './TheGame.scss'
 
 
@@ -52,10 +55,15 @@ export default function TheGames() {
           images={[spelling,spelling1,spelling2]}
           link='/spelling'
         />
-          <Card
+        <Card
           title="Memory game"
           images={[memory,memory1,memory2]}
           link='/memory'
+        />
+        <Card
+          title="Whack The mole Game"
+          images={[mole,mole1,mole2]}
+          link='/mole'
         />
       </section>
        

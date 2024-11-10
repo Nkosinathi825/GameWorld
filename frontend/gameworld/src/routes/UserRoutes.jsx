@@ -8,6 +8,7 @@ import QuizeGame from "../games/Quize/QuizeGame";
 import MathGame from "../games/Mathematics/MathGame";
 import SpellingGame from "../games/SpellingGame/SpellingGame";
 import Memory from "../games/Memory/Memory";
+import Mole from "../games/Mole/Mole.jsx";
 
 function UserRoutes() {
   return (
@@ -73,6 +74,14 @@ function UserRoutes() {
         element={
           <ProtectedRoute>
             <Memory/>
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/mole" 
+        element={
+          <ProtectedRoute>
+            <Mole/>
           </ProtectedRoute>
         } 
       />

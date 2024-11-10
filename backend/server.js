@@ -6,6 +6,8 @@ const Sudoku =require('./model/Sudoku.model')
 const Snake =require('./model/Snake.model')
 const Quiz=require('./model/Quiz.model')
 const Math=require('./model/Math.model')
+const Mole=require('./model/Mole.model')
+const Memory=require('./model/Memory.model')
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -212,6 +214,74 @@ app.post('/saveMath', async (req, res) => {
     }
 });
 
+app.post('/saveMole', async (req, res) => {
+    try {
+        const { user_id, level, score, date = new Date(), gameName } = req.body;
+        
+
+        const existingGame = await Mole.findOne({ user_id, level });
+
+        if (existingGame) {
+
+            if (existingGame.score < score) {
+                existingGame.score = score; 
+                existingGame.date = date; 
+                await existingGame.save();
+                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
+            } else {
+                return res.status(200).json({ message: ' no update made.' });
+            }
+        }
+
+        const newGame = new Mole({
+            user_id,
+            level,
+            score,
+            date,
+            gameName,
+        });
+
+        await newGame.save();
+        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
+    } catch (error) {
+        console.error('Error saving game:', error);
+        res.status(500).json({ message: 'Failed to save game', error: error.message });
+    }
+});
+app.post('/saveMemory', async (req, res) => {
+    try {
+        const { user_id, level, time, date = new Date(), gameName } = req.body;
+        
+
+        const existingGame = await Memory.findOne({ user_id, level });
+
+        if (existingGame) {
+
+            if (existingGame.time > time) {
+                existingGame.time = time; 
+                existingGame.date = date; 
+                await existingGame.save();
+                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
+            } else {
+                return res.status(200).json({ message: ' no update made.' });
+            }
+        }
+
+        const newGame = new Memory({
+            user_id,
+            level,
+            time,
+            date,
+            gameName,
+        });
+
+        await newGame.save();
+        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
+    } catch (error) {
+        console.error('Error saving game:', error);
+        res.status(500).json({ message: 'Failed to save game', error: error.message });
+    }
+});
 
 async function startServer() {
     try {

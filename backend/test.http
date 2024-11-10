@@ -1,9 +1,9 @@
-POST http://localhost:5000/saveMath
+POST http://localhost:5000/saveMemory
 Content-Type: application/json
 
 {
     "user_id":"66ecee14f0d592d9c7eab105",
     "level": "Easy",
-    "score": "17",
-    "gameName": "saveMath"
+    "time": "1",
+    "gameName": "saveMole"
 }
