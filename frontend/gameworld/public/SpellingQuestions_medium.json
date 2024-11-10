@@ -131,7 +131,7 @@
         "correct_answer": "C"
       },
       {
-        "question": "./soliloquy.webp",
+        "question": "./soliloquy.jpg",
         "options": [
           "A) Solilquoy",
           "B) Soliloquy",
@@ -141,7 +141,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./fluorescent.avif",
+        "question": "./fluorescent.jpg",
         "options": [
           "A) Fluorescent",
           "B) Florescent",
@@ -151,7 +151,7 @@
         "correct_answer": "A"
       },
       {
-        "question": "./irresistible.png",
+        "question": "./irresistible.jpeg",
         "options": [
           "A) Irresistable",
           "B) Irresistablee",
@@ -161,7 +161,7 @@
         "correct_answer": "C"
       },
       {
-        "question": "./privilege.avif",
+        "question": "./privilege.webp",
         "options": [
           "A) Privelege",
           "B) Priviledge",
@@ -171,7 +171,7 @@
         "correct_answer": "C"
       },
       {
-        "question": "./recommend.jpeg",
+        "question": "./recommend.avif",
         "options": [
           "A) Reccommend",
           "B) Recommend",
@@ -191,7 +191,7 @@
         "correct_answer": "C"
       },
       {
-        "question": "./subtle.png",
+        "question": "./subtle.jpg",
         "options": [
           "A) Suttle",
           "B) Subtle",
@@ -201,7 +201,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./conscientious.avif",
+        "question": "./conscientious.webp",
         "options": [
           "A) Concientious",
           "B) Conscientious",
@@ -221,7 +221,7 @@
         "correct_answer": "C"
       },
       {
-        "question": "./psychology.jpg",
+        "question": "./psychology.webp",
         "options": [
           "A) Pshycology",
           "B) Psycology",
@@ -231,7 +231,7 @@
         "correct_answer": "D"
       },
       {
-        "question": "./supersede.jpg",
+        "question": "./supersede.webp",
         "options": [
           "A) Supersede",
           "B) Supersceed",
@@ -261,7 +261,7 @@
         "correct_answer": "C"
       },
       {
-        "question": "./deceive.webp",
+        "question": "./deceive.jpg",
         "options": [
           "A) Decieve",
           "B) Deceeve",
@@ -281,7 +281,7 @@
         "correct_answer": "B"
       },
       {
-        "question": "./bureaucracy.jpg",
+        "question": "./bureaucracy.jpeg",
         "options": [
           "A) Bureaucracy",
           "B) Bureacracy",

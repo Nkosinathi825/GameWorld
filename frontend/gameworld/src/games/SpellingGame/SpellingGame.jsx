@@ -11,7 +11,6 @@ import axios from 'axios';
 
 export default function SpellingGame() {
     const [difficulty, setDifficulty] = useState('Easy');
-    const [isWinnerPopupVisible, setWinnerPopupVisible] = useState(false);
     const [score, setScore] = useState(0);
     const [highscore, setHighScore] = useState(0);
     const [gameStatus, setGameStatus] = useState(false);
@@ -22,13 +21,13 @@ export default function SpellingGame() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [timer, setTimer] = useState(60);
     const { user } = useContext(UserContext);
-    const [gameName] = useState("Snake");
+    const [gameName] = useState("Spelling");
     const images = [a, b, c, d];
 
   
     const saveGame = async () => {
         try {
-          const response = await axios.post('http://localhost:5000/saveQuiz', {
+          const response = await axios.post('http://localhost:5000/saveSpelling', {
             user_id: user.id,
             level: difficulty,
             score: score,
@@ -137,8 +136,25 @@ export default function SpellingGame() {
     return (
         <main className='SpellingGame-container'>
             <section className='Spelling-header'>
-                <section className='title'> <h3>Quize Game</h3></section>
-                
+                <section className='title'> <h3>Quize Game - {difficulty}</h3></section>
+                <section className='options'>
+                    <FontAwesomeIcon
+                        icon={faEllipsisVertical}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            togglePopup();
+                        }}
+                    />
+                    {isPopupVisible && (
+                        <div className="popup-menu" onClick={e => e.stopPropagation()}>
+                            <ul>
+                                <li onClick={() => handleDifficultyChange('Easy')}>Easy</li>
+                                <li onClick={() => handleDifficultyChange('Medium')}>Medium</li>
+                              
+                            </ul>
+                        </div>
+                    )}
+                </section>
             </section>
             <section className='Spelling-body'>
                 <section className='Spelling-status'>
