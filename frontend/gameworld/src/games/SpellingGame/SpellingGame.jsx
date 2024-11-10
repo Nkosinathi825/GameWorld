@@ -137,26 +137,8 @@ export default function SpellingGame() {
     return (
         <main className='SpellingGame-container'>
             <section className='Spelling-header'>
-                <section className='title'> <h3>Quize Game - {difficulty}</h3></section>
-                <section className='options'>
-                    <FontAwesomeIcon
-                        icon={faEllipsisVertical}
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            togglePopup();
-                        }}
-                    />
-                    {isPopupVisible && (
-                        <div className="popup-menu" onClick={e => e.stopPropagation()}>
-                            <ul>
-                                <li onClick={() => handleDifficultyChange('Easy')}>Easy</li>
-                                <li onClick={() => handleDifficultyChange('Medium')}>Medium</li>
-                                <li onClick={() => handleDifficultyChange('Hard')}>Hard</li>
-                                <li onClick={() => handleDifficultyChange('EvilHard')}>Evil Hard</li>
-                            </ul>
-                        </div>
-                    )}
-                </section>
+                <section className='title'> <h3>Quize Game</h3></section>
+                
             </section>
             <section className='Spelling-body'>
                 <section className='Spelling-status'>
