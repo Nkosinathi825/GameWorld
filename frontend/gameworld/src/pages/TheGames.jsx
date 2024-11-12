@@ -19,54 +19,53 @@ import memory2 from  '../images/memory2.jpg'
 import mole from  '../images/mole.jpg'
 import mole1 from  '../images/mole1.jpg'
 import mole2 from  '../images/mole2.jpg'
+import jump from '../images/jump.webp'
+import jump1 from "../images/jump1.jpg";
+import jump2 from "../images/jump2.jpg";
 import './TheGame.scss'
 
 
 export default function TheGames() {
 
   return (
-    <main className='games-container'>
-      <section className='games-header'> 
+    <main className="games-container">
+      <section className="games-header">
         <h3>"Endless Fun, One Destination – Play Anytime, Anywhere!"</h3>
       </section>
-      <section className='games-games'>
-        <Card
-          title="Sudoku"
-          images={[sudoku1,sudoku2]}
-          link='/sudoku'
-        />
-         <Card
-          title="Snake Game"
-          images={[snake1,snake2]}
-          link='/snake'
-        />
+      <section className="games-games">
+        <Card title="Sudoku" images={[sudoku1, sudoku2]} link="/sudoku" />
+        <Card title="Snake Game" images={[snake1, snake2]} link="/snake" />
         <Card
           title="Quiz Game"
-          images={[quize1,quize2,quize3]}
-          link='/quize'
+          images={[quize1, quize2, quize3]}
+          link="/quize"
         />
         <Card
           title="Mathematics  Game"
-          images={[math1,math2,math3]}
-          link='/math'
+          images={[math1, math2, math3]}
+          link="/math"
         />
         <Card
           title="Spelling Game"
-          images={[spelling,spelling1,spelling2]}
-          link='/spelling'
+          images={[spelling, spelling1, spelling2]}
+          link="/spelling"
         />
         <Card
           title="Memory game"
-          images={[memory,memory1,memory2]}
-          link='/memory'
+          images={[memory, memory1, memory2]}
+          link="/memory"
         />
         <Card
           title="Whack The mole Game"
-          images={[mole,mole1,mole2]}
-          link='/mole'
+          images={[mole, mole1, mole2]}
+          link="/mole"
+        />
+        <Card
+          title="The Rolling Ball Game"
+          images={[jump, jump1, jump2]}
+          link="/The Rolling Ball Game"
         />
       </section>
-       
     </main>
-  )
+  );
 }

@@ -9,81 +9,90 @@ import MathGame from "../games/Mathematics/MathGame";
 import SpellingGame from "../games/SpellingGame/SpellingGame";
 import Memory from "../games/Memory/Memory";
 import Mole from "../games/Mole/Mole.jsx";
+import Dinosaur from "../games/Dinosaur/Dinosaur.jsx";
 
 function UserRoutes() {
   return (
     <Routes>
-      <Route 
-        path="/dashboard" 
+      <Route
+        path="/dashboard"
         element={
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-        } 
+        }
       />
-         <Route 
-        path="/thegame" 
+      <Route
+        path="/thegame"
         element={
           <ProtectedRoute>
-            <TheGames/>
+            <TheGames />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/sudoku" 
+      <Route
+        path="/sudoku"
         element={
           <ProtectedRoute>
-            <Sudoku/>
+            <Sudoku />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/snake" 
+      <Route
+        path="/snake"
         element={
           <ProtectedRoute>
-            <Snake/>
+            <Snake />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/quize" 
+      <Route
+        path="/quize"
         element={
           <ProtectedRoute>
-            <QuizeGame/>
+            <QuizeGame />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/math" 
+      <Route
+        path="/math"
         element={
           <ProtectedRoute>
-            <MathGame/>
+            <MathGame />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/spelling" 
+      <Route
+        path="/spelling"
         element={
           <ProtectedRoute>
-            <SpellingGame/>
+            <SpellingGame />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/memory" 
+      <Route
+        path="/memory"
         element={
           <ProtectedRoute>
-            <Memory/>
+            <Memory />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/mole" 
+      <Route
+        path="/mole"
         element={
           <ProtectedRoute>
-            <Mole/>
+            <Mole />
           </ProtectedRoute>
-        } 
+        }
+      />
+      <Route
+        path="/The Rolling Ball Game"
+        element={
+          <ProtectedRoute>
+            <Dinosaur/>
+          </ProtectedRoute>
+        }
       />
     </Routes>
   );

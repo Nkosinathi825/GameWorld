@@ -125,7 +125,13 @@ export default function Memory() {
     // Handle reset button click
     const handleReset = () => {
         setScore(0);
-        setTimer(0);
+         if (difficulty === "Easy" || difficulty === "Medium") {
+           setTimer(60);
+         } else if (difficulty === "Hard") {
+           setTimer(90);
+         } else if (difficulty === "EvilHard") {
+           setTimer(120);
+         }
         setIsRunning(false);
         setMatchedPairs(0);  // Reset matched pairs count on reset
         setGameOver(false);
