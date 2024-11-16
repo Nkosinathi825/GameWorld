@@ -1,28 +1,58 @@
 import React, { useRef, useEffect, useState, useContext } from "react";
 import "./Dinosaur.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
-
 import { UserContext } from "../../context/UserProvider";
 import axios from "axios";
 
 export default function Dinosaur() {
   const [popupVisible, setPopupVisible] = useState(false);
   const [difficulty, setDifficulty] = useState("Easy");
-  const [items, setItems] = useState([]);
-  const [timer, setTimer] = useState(120);
-  const [gameEndType, setGameEndType] = useState("");
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
-  const [prev, setPrev] = useState(-1);
-  const [matchedPairs, setMatchedPairs] = useState(0); // Track matched pairs
   const { user } = useContext(UserContext);
-  const [gameName] = useState("Jump");
+  const [gameName] = useState("Rolling");
+  const [ballColor, setBallColor] = useState("red"); // Default color
+  const colorArray=['blue','pink','orange','green']
+
   const canvasRef = useRef(null);
+
+  // Save the game progress
+  const saveGame = async () => {
+    try {
+      const response = await axios.post('http://localhost:5000/saveRolling', {
+        user_id: user.id,
+        level: difficulty,
+        score: score,
+        gameName: gameName,
+      });
+      console.log('Game saved:', response.data);
+    } catch (error) {
+      console.error("Couldn't save your game:", error);
+    }
+  };
+
+  // Handle key press to reset the game and save progress
+  useEffect(() => {
+    const keyPress = (e) => {
+      if (gameOver && e.key === "Enter") {
+        handleReset();
+        saveGame();
+      }
+    };
+
+    window.addEventListener("keydown", keyPress);
+
+    return () => {
+      window.removeEventListener("keydown", keyPress);
+    };
+  }, [gameOver]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) {
+      return; // Prevent running the effect if canvas is not yet available
+    }
+
     const context = canvas.getContext("2d");
 
     const width = 780;
@@ -30,129 +60,156 @@ export default function Dinosaur() {
     canvas.width = width;
     canvas.height = height;
 
-    const obtacleWidth = 50;
-    const obtacleHeight = 100;
-    const obtacleSpeed = 10;
+    const player = {
+      x: 0,
+      y: 410,
+      width: 50,
+      height: 50,
+    };
 
-    const circlex = 50;
-    let circley = 430;
-    const circleradius = 30;
-    let isJumping = false;
-    let jumpVelocity = 0;
+    let velocityX = -10; // Initial obstacle speed (moving left)
+    
+    let velocityY = 0;
     const gravity = 0.4;
-    const jumpStrength = -10;
 
-    // Initialize two obstacles with independent X and Y positions
-    let obstacle1 = { x: width, y: 390 };
-    // let obstacle2 = {
-    //   x: width + 400,
-    //   y: Math.random() * (height - obtacleHeight),
-    // };
+    let isOnGround = true;
+    const obstacles = [];
+    const spawnInterval = 1500; // Time in ms between obstacle spawns
 
-    const handleKeyDown = (event) => {
-      if (event.code === "ArrowUp" && !isJumping) {
-        isJumping = true;
-        jumpVelocity = jumpStrength;
+    // Function to detect collision between two rectangles
+    function detectCollision(a, b) {
+      return (
+        a.x < b.x + b.width &&
+        a.x + a.width > b.x &&
+        a.y < b.y + b.height &&
+        a.y + a.height > b.y
+      );
+    }
+
+    // Function to create a new obstacle
+    const createObstacle = () => {
+      const obstacle = {
+        x: width,
+        y: 360, // Ground level
+        width: 50,
+        height: 100,
+      };
+      obstacles.push(obstacle);
+    };
+
+    // Function to handle jump
+    const handleJump = (e) => {
+      if (gameOver || !isOnGround) return;
+      if (e.code === "Space" || e.code === "ArrowUp") {
+        velocityY = -10; // Jump strength
+        isOnGround = false;
       }
     };
 
-  
-  const detectCollision = (obstacle) => {
-    // Circle's center coordinates
-    const circleCenterX = circlex;
-    const circleCenterY = circley;
-
-    // Closest point on the rectangle to the circle center
-    const closestX = Math.max(
-      obstacle.x,
-      Math.min(circleCenterX, obstacle.x + obtacleWidth)
-    );
-    const closestY = Math.max(
-      obstacle.y,
-      Math.min(circleCenterY, obstacle.y + obtacleHeight)
-    );
-
-    // Calculate the distance from the circle's center to the closest point on the obstacle
-    const distanceX = circleCenterX - closestX;
-    const distanceY = circleCenterY - closestY;
-
-    // Calculate the squared distance from the circle to the closest point
-    const distanceSquared = distanceX * distanceX + distanceY * distanceY;
-
-    // Check if the circle's radius is big enough to overlap the obstacle
-    const isColliding = distanceSquared <= circleradius * circleradius;
-
-    // We need to check if the player is really above the obstacle (during the jump)
-    // If the player is jumping over the obstacle, no collision should occur.
-    if (circley + circleradius < obstacle.y) {
-      return false; // The player is above the obstacle, so no collision.
-    }
-
-    // Return the collision status
-    return isColliding;
-  };
-
-
+    // Animation loop
     const animate = () => {
+      if (gameOver) return; // Stop the animation loop if the game is over
+
       context.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw and update first obstacle
-      context.fillStyle = "yellow";
-      context.fillRect(obstacle1.x, obstacle1.y, obtacleWidth, obtacleHeight);
-      obstacle1.x -= obtacleSpeed;
+      // Update player position
+      velocityY += gravity;
+      player.y += velocityY;
 
-    //   // Draw and update second obstacle
-    //   context.fillRect(obstacle2.x, obstacle2.y, obtacleWidth, obtacleHeight);
-    //   obstacle2.x -= obtacleSpeed;
-
-      // Reset first obstacle if it moves off-screen and randomize its Y position
-      if (obstacle1.x < -obtacleWidth) {
-        obstacle1.x = 780; // Randomize re-entry
-        obstacle1.y = 390;
+      // Prevent the player from falling below the ground
+      if (player.y >= 410) {
+        player.y = 410;
+        velocityY = 0;
+        isOnGround = true;
+      }
+      if (player.x < 50) {
+        player.x+= 0.2;
+       
       }
 
-      // Reset second obstacle if it moves off-screen and randomize its Y position
-    //   if (obstacle2.x < -obtacleWidth) {
-    //     obstacle2.x = 780; // Randomize re-entry
-    //     obstacle2.y = Math.random() * (230 - obtacleHeight);
-    //   }
-
-      // Draw player (circle)
+      // Draw the player as a circle (ball)
+      context.fillStyle = ballColor;
       context.beginPath();
-      context.arc(circlex, circley, circleradius, 0, Math.PI * 2);
-      context.fillStyle = "red";
+      context.arc(
+        player.x + player.width / 2, // x-coordinate (center of the circle)
+        player.y + player.height / 2, // y-coordinate (center of the circle)
+        player.width / 2, // radius
+        0, // start angle
+        Math.PI * 2 // end angle (full circle)
+      );
       context.fill();
 
-      if (isJumping) {
-        circley += jumpVelocity;
-        jumpVelocity += gravity;
+      // Update and draw obstacles
+      for (let i = 0; i < obstacles.length; i++) {
+        const obstacle = obstacles[i];
+        obstacle.x += velocityX;
 
-        if (circley >= 430) {
-          circley = 430;
-          isJumping = false;
+        // Remove off-screen obstacles
+        if (obstacle.x + obstacle.width < 0) {
+          obstacles.splice(i, 1);
+          i--;
+          // Increase score when an obstacle is avoided
+          continue;
+        }
+
+        // Draw the obstacle
+        context.fillStyle = "yellow";
+        context.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+
+        // Check for collision
+        if (detectCollision(player, obstacle)) {
+          setGameOver(true);
+
+          return;
         }
       }
 
-      // Check for collisions with both obstacles
-      if (detectCollision(obstacle1) ) {
-        setGameOver(true);
-        setGameEndType("collision");
-        setIsRunning(false);
-        return;
-      }
-
+      // Call next frame
       requestAnimationFrame(animate);
     };
 
-    window.addEventListener("keydown", handleKeyDown);
+    // Start spawning obstacles
+    const obstacleInterval = setInterval(createObstacle, spawnInterval);
 
-    animate();
+    // Interval to increase obstacle speed every 3 seconds
+    const gameInterval = setInterval(() => {
+      if(isRunning){
+        velocityX -= 1;  // Gradually decrease the speed (make it move faster)
 
+      }
+     
+    }, 3000); // Increase the speed every 3 seconds
+    const ScoreInterval = setInterval(() => {
+      if(isRunning){
+        setScore(prevScore => prevScore + 1);
+      }
+     
+    }, 100); // Increase the speed every 3 seconds
+
+    // Event listener for jumping
+    window.addEventListener("keydown", handleJump);
+
+    // Start animation
+    if (isRunning) {
+      animate();
+    }
+
+    // Cleanup on component unmount
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
+      clearInterval(obstacleInterval);
+      clearInterval(gameInterval);
+      clearInterval(ScoreInterval);
+      window.removeEventListener("keydown", handleJump);
     };
-  }, []);
+  }, [gameOver, isRunning]);
+  useEffect(() => {
+    if (score % 10 === 0 && score > 0) {
+      const randomColor = colorArray[Math.floor(Math.random() * colorArray.length)];
+      setBallColor(randomColor);
+    }
+  }, [score]);
 
+  // Handle difficulty change in popup
   const togglePopup = () => {
     setPopupVisible(!popupVisible);
   };
@@ -164,14 +221,14 @@ export default function Dinosaur() {
 
   const handleStart = () => {
     setIsRunning(true);
-    setMatchedPairs(0); // Reset matched pairs count on start
   };
+
+
 
   // Handle reset button click
   const handleReset = () => {
     setScore(0);
     setIsRunning(false);
-    setMatchedPairs(0); // Reset matched pairs count on reset
     setGameOver(false);
   };
 
@@ -196,15 +253,8 @@ export default function Dinosaur() {
         {gameOver ? (
           <div className="winner-popup">
             <h2>Game Over!</h2>
-            <h3>
-              {gameEndType === "timeOut"
-                ? "You ran out of time"
-                : "You completed the game!"}
-            </h3>
-            <p>
-              You finished the {difficulty} game with a score of {score}!
-            </p>
-            <p>Click Enter to continue.</p>
+            <p>Score: {score}</p>
+            <p>Press Enter to continue.</p>
           </div>
         ) : (
           <section className="JumpContent">
@@ -214,12 +264,7 @@ export default function Dinosaur() {
       </section>
       <section className="Jump-end">
         <button onClick={handleStart}>Start</button>
-        <button onClick={handlePause} disabled={!isRunning}>
-          Pause
-        </button>
-        <button onClick={handleReset} disabled={!isRunning}>
-          Reset
-        </button>
+        
       </section>
     </main>
   );
