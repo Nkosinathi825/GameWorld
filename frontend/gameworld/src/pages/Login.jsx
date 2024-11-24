@@ -7,7 +7,7 @@ import jump from '../images/jump.webp'
 import math1 from '../images/math1.jpg'
 import { UserContext } from '../context/UserProvider'; 
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './Login.scss'; 
 
@@ -81,7 +81,7 @@ export default function Login() {
                         <img src={images[currentImageIndex]} alt="changing pictures" />
                     </section>
                     <section className='details'>
-                        <p>Don't have an account? <a href="/register">Sign up</a></p>
+                        <p>Don't have an account? < Link to={"/register"}>Sign up</Link></p>
                     </section>
                 </section>
             </main>
