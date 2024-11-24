@@ -8,7 +8,7 @@ export default function Card({ question, difficulty, id, handleCardClick }) {
 
   return (
     <div
-      className={`Card ${isActive ? 'active' : 'inactive'} ${question.status}`}
+      className={`Cards ${isActive ? 'active' : 'inactive'} ${question.status}`}
       style={{ animationDuration }}
       onClick={() => handleCardClick(id)}
     >

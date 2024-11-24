@@ -1,0 +1,44 @@
+.HomePage{
+    background-color: #e0e7ff;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+   
+    box-sizing: border-box; 
+    overflow: auto;
+
+  .games-header {
+    display: flex;
+    color: #333333; 
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    background-color: #34419e;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+      color: #ffffff; 
+    }
+  }
+  .HomeBody{
+    padding: 10px 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 90%;
+    background-color:white; 
+    box-sizing: border-box;
+  }
+
+}

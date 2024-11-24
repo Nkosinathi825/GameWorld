@@ -30,11 +30,17 @@ export default function TheGames() {
   return (
     <main className="games-container">
       <section className="games-header">
-        <h3>"Endless Fun, One Destination – Play Anytime, Anywhere!"</h3>
+        <h3>Endless Fun, One Destination – Play Anytime, Anywhere!</h3>
       </section>
       <section className="games-games">
-        <Card title="Sudoku" images={[sudoku1, sudoku2]} link="/sudoku" />
-        <Card title="Snake Game" images={[snake1, snake2]} link="/snake" />
+        <Card 
+          title="Sudoku" 
+          images={[sudoku1, sudoku2]} 
+          link="/sudoku" />
+        <Card 
+          title="Snake Game" 
+          images={[snake1, snake2]} 
+          link="/snake" />
         <Card
           title="Quiz Game"
           images={[quize1, quize2, quize3]}

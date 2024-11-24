@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import './Sidebar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faHistory, faChartLine, faSignOutAlt, faGamepad } from '@fortawesome/free-solid-svg-icons';
@@ -8,12 +8,31 @@ import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
   const { logoutUser } = useContext(UserContext);
+  const [active,setActive]= useState(1)
   const navigate=useNavigate()
 
   const handleLogout = () => {
     logoutUser();
     navigate('/login')
   };
+  const handleChnage =(number)=>{
+    switch (number) {
+      case 1 :
+        setActive(1)
+      break
+      case 2 :
+        setActive(2)
+      break
+      case 3 :
+        setActive(3)
+      break
+      case 4 :
+        setActive(4)
+      break
+      default:
+        setActive(1)
+    }
+  }
 
   return (
     <div className='side-container'>
@@ -22,22 +41,28 @@ export default function Sidebar() {
       </section>
       <section className='side-details'>
         <div>
-          <FontAwesomeIcon icon={faHouse} />
-          <span>Home</span>
-        </div>
-        <div>
-          <Link to={'/thegame'}>
-          <FontAwesomeIcon icon={faGamepad} />
-          <span>Games</span>
+          <Link to={'/dashboard'} onClick={()=>{handleChnage(1)}} className={`link ${active ===1 ? 'active' :"" }`} >
+          <span className='icon'><FontAwesomeIcon icon={faHouse} /></span>
+          <span className='name'>Home</span>
           </Link>
         </div>
         <div>
-          <FontAwesomeIcon icon={faHistory} />
-          <span>History</span>
+          <Link to={'/thegame'} onClick={()=>{handleChnage(2)}} className={`link ${active ===2 ? 'active' :"" }`}>
+          <span className='icon'><FontAwesomeIcon icon={faGamepad} /></span>
+          <span className='name '>Games</span>
+          </Link>
         </div>
         <div>
-          <FontAwesomeIcon icon={faChartLine} />
-          <span>Analysis</span>
+          <Link onClick={()=>{handleChnage(3)}} className={`link ${active ===3 ? 'active' :"" }`}>
+            <span className='icon'><FontAwesomeIcon icon={faHistory} /></span>
+            <span className='name'>History</span>
+          </Link>
+        </div>
+        <div>
+          <Link onClick={()=>{handleChnage(4)}} className={`link ${active ===4 ? 'active' :"" }`}>
+            <span className='icon'><FontAwesomeIcon icon={faChartLine} /></span>
+            <span className='name'>Analysis</span>
+          </Link>
         </div>
       </section>
 

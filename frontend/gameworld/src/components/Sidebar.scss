@@ -3,20 +3,21 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #1b1f3b;
+    background-color: #28369b;
     color: #ffffff;
+    box-sizing: border-box;
   
     .side-title {
       font-size: 24px;
       font-weight: bold;
       color: #ffffff;
-      height: 10%;
+      height: 20%;
       width: 100%;
-      border-bottom: 2px solid silver;
+      display: flex;
+  
       justify-content: center;
       align-items: center;
-      background-color: #e55347;
-
+    
     
   
       h1 {
@@ -27,21 +28,53 @@
     .side-details {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      padding-left:1rem;
+      padding-top: 2rem;
+      gap: 1rem;
       width: 100%;
       height: 80%;
 
   
       div {
+
+       
+        
+        width: 88%;
+        height: 3rem;
         display: flex;
         align-items: center;
-        padding: 10px 0;
+        padding: .1rem 0;
         cursor: pointer;
         transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: #272b4e;
+        .active{
+          background-color: #051483;
+          border-radius: 0.5rem;
+          scale: 1.07;
         }
+        .link{
+  
+          width: 100%;
+          height: 100%;
+          display: flex;
+          padding: 0 1rem;
+          align-items: center;
+          .icon{
+            width: 30%;
+          }
+          .name{
+            font-size: 1.5rem;
+            color: #ffffff;
+            font-style: none;
+            text-decoration: none;
+          }
+          &:hover {
+            background-color: #0e24ce;
+            border-radius: 0.5rem;
+            scale: 1.07;
+          }
+        }
+  
+     
   
         svg {
           margin-right: 15px;
@@ -49,10 +82,7 @@
           font-size: 20px;
         }
   
-        span {
-          font-size: 18px;
-          color: #ffffff;
-        }
+        
       }
     }
   
@@ -66,7 +96,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #ff6347;
+        background-color: #051483;
         color: white;
         border: none;
         padding: 10px 15px;
@@ -76,7 +106,7 @@
         transition: background-color 0.3s ease;
   
         &:hover {
-          background-color: #e55347;
+          background-color: #0e24ce;
         }
   
         svg {
