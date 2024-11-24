@@ -53,7 +53,7 @@ export default function Sidebar() {
           </Link>
         </div>
         <div>
-          <Link onClick={()=>{handleChnage(3)}} className={`link ${active ===3 ? 'active' :"" }`}>
+          <Link to={'/history'} onClick={()=>{handleChnage(3)}} className={`link ${active ===3 ? 'active' :"" }`}>
             <span className='icon'><FontAwesomeIcon icon={faHistory} /></span>
             <span className='name'>History</span>
           </Link>
