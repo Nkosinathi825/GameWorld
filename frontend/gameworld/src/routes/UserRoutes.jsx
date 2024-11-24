@@ -10,6 +10,7 @@ import SpellingGame from "../games/SpellingGame/SpellingGame";
 import Memory from "../games/Memory/Memory";
 import Mole from "../games/Mole/Mole.jsx";
 import Dinosaur from "../games/Dinosaur/Dinosaur.jsx";
+import History from "../pages/History.jsx";
 
 function UserRoutes() {
   return (
@@ -19,6 +20,14 @@ function UserRoutes() {
         element={
           <ProtectedRoute>
             <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/history"
+        element={
+          <ProtectedRoute>
+            <History />
           </ProtectedRoute>
         }
       />
