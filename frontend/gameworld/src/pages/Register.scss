@@ -8,12 +8,12 @@ $text-color: #333;
 $label-color: #555;
 $background-color: white;
 
-.contanier {
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: $secondary-color;
+    background: linear-gradient(to bottom, #007bff 0%, navy 100%);
     font-family: 'Arial', sans-serif;
 }
 
@@ -120,7 +120,7 @@ $background-color: white;
                 border: none;
                 border-bottom: 2px solid black;
                 padding: 10px;
-              
+                height: 1.5rem;
                 border-radius: 5px;
                 font-size: 1rem;
                 background-color: #06105c;

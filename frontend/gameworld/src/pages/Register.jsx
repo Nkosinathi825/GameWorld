@@ -1,8 +1,8 @@
 import React, { useEffect, useState  } from 'react';
-import snake2 from '../images/snake4.jpg'
+import mole2 from  '../images/mole2.jpg'
 import quize2 from '../images/quize1.jpg';
 import spelling1 from  '../images/spelling1.avif'
-import memory1 from  '../images/memory1.avif'
+import memory from  '../images/memory.webp'
 import mole1 from  '../images/mole1.jpg'
 import jump1 from "../images/jump2.jpg";
 
@@ -11,7 +11,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import './Register.scss';
 
-const images = [quize2, spelling1,  memory1,mole1,jump1,snake2];
+const images = [quize2,spelling1,memory,mole1,jump1,mole2];
 
 export default function Register() {
     const [name, setName] = useState('');
