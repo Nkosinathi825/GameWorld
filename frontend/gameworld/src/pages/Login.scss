@@ -25,23 +25,24 @@ $background-color: white;
     overflow: hidden;
     max-width: 900px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    border: 2px solid black;
+  
     width: 100%;
-    height: 60%;
+    height: 70%;
 
     .login-details {
-        flex: 1;
-        padding: 40px;
+        width: 50%;
+
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-        border-right:2px solid black;
+        background-color: #28369b;
         justify-content: center;
         align-items: center;
 
         h1 {
             margin-bottom: 20px;
             font-size: 2rem;
-            color: $text-color;
+            color: white;
         }
         form{
             width: 100%;
@@ -53,15 +54,24 @@ $background-color: white;
                 display: block;
                 margin-bottom: 8px;
                 font-weight: bold;
-                color: $label-color;
+                color: white;
             }
 
             input {
-                width: 100%;
+                width: 90%;
+                height: 1.5rem;
                 padding: 10px;
-                border: 1px solid $border-color;
+                border: none;
+                border-bottom: 2px solid black;
                 border-radius: 5px;
                 font-size: 1rem;
+                background-color: #06105c;
+                color: white;
+                outline: none;
+                margin-top: 1rem;
+                &::placeholder{
+                    color: white;
+                }
 
                 &:focus {
                     outline: none;
@@ -76,10 +86,11 @@ $background-color: white;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 5rem;
             button {
                 width: 50%;
                 padding: 10px 15px;
-                background-color: $primary-color;
+                background-color: #051483;
                 color: white;
                 border: none;
                 border-radius: 5px;
@@ -87,15 +98,13 @@ $background-color: white;
                 cursor: pointer;
                 transition: background-color 0.3s;
 
-                &:hover {
-                    background-color: $hover-color;
-                }
+               
             }
         }
     }
 
     .login-image {
-        flex: 1;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -103,10 +112,11 @@ $background-color: white;
         position: relative;
         overflow: hidden;
         background-color: lighten($secondary-color, 10%);
+        position: relative;
 
         .image {
             width: 100%;
-            height: 90%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -124,17 +134,19 @@ $background-color: white;
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 10%;
+            position: absolute;
             font-size: x-large;
-            color: #333;
+            color: black;
             font-weight: bolder;
+            z-index: 100;
+            bottom: 1rem;
 
             p {
                 margin: 0;
                 font-size: 1rem;
 
                 a {
-                    color: $primary-color;
+                    color: blue;
                     text-decoration: none;
                     font-weight: bold;
 

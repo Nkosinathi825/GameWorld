@@ -1,20 +1,17 @@
 import React, { useEffect, useState,useContext } from 'react';
-import RegisterPicture from '../images/registerpic.png';
-import sudoku1 from '../images/sudoku4.webp';
-import sudoku2 from '../images/sudoku5.avif';
-import math1 from '../images/math1.jpeg';
-import math2 from '../images/math2.jpg';
-import tick1 from '../images/tick1.png';
-import tick2 from '../images/tick1.jpeg';
 import snake1 from '../images/snake.jpg'
-import snake2 from '../images/snake4.jpg'
+
+import mole from  '../images/mole.jpg'
+import spelling from  '../images/spelling.avif'
+import jump from '../images/jump.webp'
+import math1 from '../images/math1.jpg'
 import { UserContext } from '../context/UserProvider'; 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 import './Login.scss'; 
 
-const images = [RegisterPicture, sudoku1,  math1,snake1, tick1,sudoku2, tick2,snake2, math2];
+const images = [ mole,  math1,jump, spelling,snake1];
 
 export default function Login() {
     const [email, setEmail] = useState('');
