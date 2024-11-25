@@ -1,9 +1,12 @@
-POST http://localhost:5000/saveRolling
+POST http://localhost:5000/Games
 Content-Type: application/json
 
 {
-    "user_id":"66ecee14f0d592d9c7eab105",
+    "password": "1",
+    "email": "nkosinathi@gmail.com",
+    "name": "Nkosinathi",
+    "user_id": "66ecee14f0d592d9c7eab105",
     "level": "Easy",
     "score": "1",
-    "gameName": "saveMole"
+    "gameName": "RollingBall"
 }

@@ -10,6 +10,7 @@ const Mole=require('./model/Mole.model')
 const Memory=require('./model/Memory.model')
 const Spelling=require('./model/Spelling.model')
 const Rolling = require('./model/Rolling.model')
+const {User} = require('./model/Games.model')
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -350,6 +351,56 @@ app.post('/saveRolling', async (req, res) => {
         res.status(500).json({ message: 'Failed to save game', error: error.message });
     }
 });
+
+app.post('/Games', async (req, res) => {
+    try {
+        const { user_id, level, score, date = new Date(), gameName } = req.body;
+    
+        // Find the user document based on user_id
+        const user = await User.findOne({ user_id });
+    
+        if (!user) {
+            // If the user doesn't exist, create a new user document
+            const newUser = new User({
+                user_id,
+                games: [{
+                    gameName,
+                    level,
+                    score,
+                    date,
+                }]
+            });
+            await newUser.save();
+            return res.status(201).json({ message: 'User and game saved successfully!', userId: newUser._id });
+        }
+    
+        // Check if the game already exists in the user's 'games' array
+        const existingGame = user.games.find(game => game.gameName === gameName && game.level === level);
+    
+        if (existingGame) {
+            // If game exists, update it only if the new score is higher
+            if (existingGame.score < score) {
+                existingGame.score = score;
+                existingGame.date = date;
+                await user.save();
+                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
+            } else {
+                return res.status(200).json({ message: 'No update made, current score is higher or equal.' });
+            }
+        }
+    
+        // If the game doesn't exist, add it to the user's 'games' array
+        user.games.push({ gameName, level, score, date });
+        await user.save();
+        res.status(201).json({ message: 'Game saved successfully!', gameId: user._id });
+    
+    } catch (error) {
+        console.error('Error saving game:', error);
+        res.status(500).json({ message: 'Failed to save game', error: error.message });
+    }
+});
+
+
 async function startServer() {
     try {
         await mongoose.connect(process.env.MONGODB_URI);
