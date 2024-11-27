@@ -27,7 +27,7 @@ export default function SpellingGame() {
   
     const saveGame = async () => {
         try {
-          const response = await axios.post('http://localhost:5000/saveSpelling', {
+            const response = await axios.post(`http://localhost:5000/user/${user.id}/score`, {
             user_id: user.id,
             level: difficulty,
             score: score,

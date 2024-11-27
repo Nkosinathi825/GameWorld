@@ -1,16 +1,8 @@
 const express = require('express'); 
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const user= require('./model/User.model')
-const Sudoku =require('./model/Sudoku.model')
-const Snake =require('./model/Snake.model')
-const Quiz=require('./model/Quiz.model')
-const Math=require('./model/Math.model')
-const Mole=require('./model/Mole.model')
-const Memory=require('./model/Memory.model')
-const Spelling=require('./model/Spelling.model')
-const Rolling = require('./model/Rolling.model')
-const {User} = require('./model/Games.model')
+const User= require('./model/User.model')
+const LoginActivity=require('./model/LoginActivity.model')
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -41,14 +33,14 @@ app.post('/register', async (req, res) => {
 
     try {
 
-        const existingUser = await user.findOne({ email });
+        const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: 'Account already exists' });
         }
         const salt = await bcrypt.genSalt(parseInt(process.env.BCRYPT_SALT_ROUNDS, 10));
         const hashPassword = await bcrypt.hash(password, salt);
 
-        const newUser = new user({ name, email, password: hashPassword });
+        const newUser = new User({ name, email, password: hashPassword });
         await newUser.save(); 
 
         res.status(201).send('User registered successfully');
@@ -58,347 +50,149 @@ app.post('/register', async (req, res) => {
     }
 });
 
+
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        const existingUser = await user.findOne({ email });
+        // Check if user exists
+        const existingUser = await User.findOne({ email });
         if (!existingUser) {
             return res.status(400).json({ message: 'Wrong email address' });
         }
         
+        // Compare password
         const isMatch = await bcrypt.compare(password, existingUser.password);
         if (!isMatch) {
             return res.status(400).json({ message: 'Wrong password' });
         }
 
+        // Generate JWT token
         const token = jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
+        // Save login event in LoginActivity collection
+        const loginEvent = new LoginActivity({
+            userId: existingUser._id,  // Correcting to use existingUser._id
+            eventType: 'login',
+        });
+        await loginEvent.save();
+
+        // Respond with the user data and token
         res.status(200).json({ user: existingUser, token });
     } catch (error) {
         console.error(error);
         res.status(500).send('Error logging in user');
     }
 });
-app.post('/saveGame', async (req, res) => {
+
+// The app.post endpoint for saving user score
+app.post('/user/:user_id/score', async (req, res) => {
+    const { user_id } = req.params;
+    const { level, score, gameName, date = new Date() } = req.body;
+  
     try {
-        const {user_id,level, timeOfCompletion , date = new Date(),gameName}= req.body
-
-        const existingGame = await Sudoku.findOne({ user_id, level });
-
-        if (existingGame) {
-
-            if (existingGame.timeOfCompletion < timeOfCompletion) {
-                existingGame.timeOfCompletion =timeOfCompletion; 
-                existingGame.date = date; 
-                await existingGame.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: 'no update made.' });
-            }
+      // Find the user document by ID
+      const user = await User.findById(user_id);
+      
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      // Check if the game already exists in the user's 'games' array
+      const existingGame = user.games.find(game => game.gameName === gameName && game.level === level);
+  
+      if (existingGame) {
+        // If game exists, update the score only if the new score is higher
+        if (existingGame.score < score) {
+          existingGame.score = score;
+          existingGame.date = date;
         }
-
-        const newGame = new Sudoku({ 
-            user_id,
-            level,
-            timeOfCompletion,
-            date,
-            gameName,
-        });
-
-        await newGame.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
-    } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
-    }
-});
-app.post('/saveSnake', async (req, res) => {
-    try {
-        const { user_id, level, score, date = new Date(), gameName } = req.body;
-        
-
-        const existingGame = await Snake.findOne({ user_id, level });
-
-        if (existingGame) {
-
-            if (existingGame.score < score) {
-                existingGame.score = score; 
-                existingGame.date = date; 
-                await existingGame.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: ' no update made.' });
-            }
-        }
-
-        const newGame = new Snake({
-            user_id,
-            level,
-            score,
-            date,
-            gameName,
-        });
-
-        await newGame.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
-    } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
-    }
-});
-app.post('/saveQuiz', async (req, res) => {
-    try {
-        const { user_id, level, score, date = new Date(), gameName } = req.body;
-        
-
-        const existingGame = await Quiz.findOne({ user_id, level });
-
-        if (existingGame) {
-
-            if (existingGame.score < score) {
-                existingGame.score = score; 
-                existingGame.date = date; 
-                await existingGame.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: ' no update made.' });
-            }
-        }
-
-        const newGame = new Quiz({
-            user_id,
-            level,
-            score,
-            date,
-            gameName,
-        });
-
-        await newGame.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
-    } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
-    }
-});
-
-app.post('/saveMath', async (req, res) => {
-    try {
-        const { user_id, level, score, date = new Date(), gameName } = req.body;
-        
-
-        const existingGame = await Math.findOne({ user_id, level });
-
-        if (existingGame) {
-
-            if (existingGame.score < score) {
-                existingGame.score = score; 
-                existingGame.date = date; 
-                await existingGame.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: ' no update made.' });
-            }
-        }
-
-        const newGame = new Math({
-            user_id,
-            level,
-            score,
-            date,
-            gameName,
-        });
-
-        await newGame.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
-    } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
-    }
-});
-
-app.post('/saveMole', async (req, res) => {
-    try {
-        const { user_id, level, score, date = new Date(), gameName } = req.body;
-        
-
-        const existingGame = await Mole.findOne({ user_id, level });
-
-        if (existingGame) {
-
-            if (existingGame.score < score) {
-                existingGame.score = score; 
-                existingGame.date = date; 
-                await existingGame.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: ' no update made.' });
-            }
-        }
-
-        const newGame = new Mole({
-            user_id,
-            level,
-            score,
-            date,
-            gameName,
-        });
-
-        await newGame.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
-    } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
-    }
-});
-app.post('/saveMemory', async (req, res) => {
-    try {
-        const { user_id, level, time, date = new Date(), gameName } = req.body;
-        
-
-        const existingGame = await Memory.findOne({ user_id, level });
-
-        if (existingGame) {
-
-            if (existingGame.time > time) {
-                existingGame.time = time; 
-                existingGame.date = date; 
-                await existingGame.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: ' no update made.' });
-            }
-        }
-
-        const newGame = new Memory({
-            user_id,
-            level,
-            time,
-            date,
-            gameName,
-        });
-
-        await newGame.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
-    } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
-    }
-});
-app.post('/saveSpelling', async (req, res) => {
-    try {
-        const { user_id, level, score, date = new Date(), gameName } = req.body;
-        
-
-        const existingGame = await Spelling.findOne({ user_id, level });
-
-        if (existingGame) {
-
-            if (existingGame.score < score) {
-                existingGame.score = score; 
-                existingGame.date = date; 
-                await existingGame.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: ' no update made.' });
-            }
-        }
-
-        const newGame = new Mole({
-            user_id,
-            level,
-            score,
-            date,
-            gameName,
-        });
-        await newGame.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
-    } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
-    }
-});
-app.post('/saveRolling', async (req, res) => {
-    try {
-        const { user_id, level, score, date = new Date(), gameName } = req.body;
-        
-
-        const existingGame = await Rolling.findOne({ user_id, level });
-
-        if (existingGame) {
-
-            if (existingGame.score < score) {
-                existingGame.score = score; 
-                existingGame.date = date; 
-                await existingGame.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: ' no update made.' });
-            }
-        }
-
-        const newGame = new Rolling({
-            user_id,
-            level,
-            score,
-            date,
-            gameName,
-        });
-        await newGame.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: newGame._id });
-    } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
-    }
-});
-
-app.post('/Games', async (req, res) => {
-    try {
-        const { user_id, level, score, date = new Date(), gameName } = req.body;
-    
-        // Find the user document based on user_id
-        const user = await User.findOne({ user_id });
-    
-        if (!user) {
-            // If the user doesn't exist, create a new user document
-            const newUser = new User({
-                user_id,
-                games: [{
-                    gameName,
-                    level,
-                    score,
-                    date,
-                }]
-            });
-            await newUser.save();
-            return res.status(201).json({ message: 'User and game saved successfully!', userId: newUser._id });
-        }
-    
-        // Check if the game already exists in the user's 'games' array
-        const existingGame = user.games.find(game => game.gameName === gameName && game.level === level);
-    
-        if (existingGame) {
-            // If game exists, update it only if the new score is higher
-            if (existingGame.score < score) {
-                existingGame.score = score;
-                existingGame.date = date;
-                await user.save();
-                return res.status(200).json({ message: 'Game score updated successfully!', gameId: existingGame._id });
-            } else {
-                return res.status(200).json({ message: 'No update made, current score is higher or equal.' });
-            }
-        }
-    
-        // If the game doesn't exist, add it to the user's 'games' array
-        user.games.push({ gameName, level, score, date });
+        // Increment the gamesPlayed counter for the specific game
+        existingGame.gamesPlayed += 1;
         await user.save();
-        res.status(201).json({ message: 'Game saved successfully!', gameId: user._id });
-    
+        return res.status(200).json({ message: 'Game score updated and play count incremented successfully!', gameId: existingGame._id });
+      } else {
+        // If the game doesn't exist, add it to the user's 'games' array
+        user.games.push({ gameName, level, score, date, gamesPlayed: 1 }); // Initialize gamesPlayed as 1
+        await user.save();
+        return res.status(201).json({ message: 'Game saved successfully and play count initialized to 1' });
+      }
+  
     } catch (error) {
-        console.error('Error saving game:', error);
-        res.status(500).json({ message: 'Failed to save game', error: error.message });
+      console.error('Error saving game:', error);
+      res.status(500).json({ message: 'Failed to save game', error: error.message });
     }
+  });
+  
+app.get('/user/:user_id/scores', async (req, res) => {
+
+    const { user_id } = req.params;
+
+  try {
+    const userObjectId = new mongoose.Types.ObjectId(user_id);
+
+
+    const user = await User.findById(userObjectId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.status(200).json({ message: 'Scores retrieved successfully', scores: user.games });
+  } catch (err) {
+    res.status(500).json({ message: 'Error retrieving scores', error: err.message });
+  }
 });
+app.get('/user/:user_id/logins/daily', async (req, res) => {
+    const { user_id } = req.params;
+  
+    try {
+      const loginData = await LoginActivity.aggregate([
+        { 
+          $match: { 
+            userId: new mongoose.Types.ObjectId(user_id), 
+            eventType: 'login' 
+          }
+        },
+        {
+          $group: {
+            _id: { $dateToString: { format: "%Y-%m-%d", date: "$timestamp" } }, // Group by formatted date
+            count: { $sum: 1 }, // Count the number of logins per day
+          }
+        },
+        { 
+          $sort: { _id: 1 } // Sort by date
+        }
+      ]);
+  
+      res.status(200).json(loginData);
+    } catch (err) {
+      res.status(500).json({ message: 'Error fetching login data', error: err.message });
+    }
+  });
+  
+  app.get('/user/:user_id/logins/monthly', async (req, res) => {
+    const { user_id } = req.params;
+  
+    try {
+      const loginData = await LoginActivity.aggregate([
+        { $match: { userId: mongoose.Types.ObjectId(user_id), eventType: 'login' } }, // Match only login events
+        { 
+          $group: {
+            _id: { $month: "$timestamp" }, // Group by month
+            count: { $sum: 1 }, // Count the number of logins per month
+          }
+        },
+        { $sort: { _id: 1 } }, // Sort by month
+      ]);
+  
+      res.status(200).json(loginData);
+    } catch (err) {
+      res.status(500).json({ message: 'Error fetching login data', error: err.message });
+    }
+  });
+  
+  
+
 
 
 async function startServer() {

@@ -89,8 +89,7 @@ const Sudoku = () => {
   };
   const saveGame = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/saveGame', {
-        user_id: user.id,
+      const response = await axios.post(`http://localhost:5000/user/${user.id}/score`, {
         level: difficulty,
         timeOfCompletion: formatTime(),
         gameName: gameName,

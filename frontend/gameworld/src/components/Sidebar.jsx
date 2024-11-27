@@ -59,7 +59,7 @@ export default function Sidebar() {
           </Link>
         </div>
         <div>
-          <Link onClick={()=>{handleChnage(4)}} className={`link ${active ===4 ? 'active' :"" }`}>
+          <Link to={'/analyitcs'} onClick={()=>{handleChnage(4)}} className={`link ${active ===4 ? 'active' :"" }`}>
             <span className='icon'><FontAwesomeIcon icon={faChartLine} /></span>
             <span className='name'>Analysis</span>
           </Link>

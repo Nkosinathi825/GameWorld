@@ -19,8 +19,7 @@ export default function Dinosaur() {
   // Save the game progress
   const saveGame = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/saveRolling', {
-        user_id: user.id,
+      const response = await axios.post(`http://localhost:5000/user/${user.id}/score`, {
         level: difficulty,
         score: score,
         gameName: gameName,

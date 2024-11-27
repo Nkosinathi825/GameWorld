@@ -21,8 +21,7 @@ export default function Mole() {
 
   const saveGame = async () => {
     try {
-        const response = await axios.post('http://localhost:5000/saveMole', {
-            user_id: user.id,
+        const response = await axios.post(`http://localhost:5000/user/${user.id}/score`, {
             level: difficulty,
             score: score,
             gameName: gameName,

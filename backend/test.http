@@ -1,12 +1,8 @@
-POST http://localhost:5000/Games
+Post http://localhost:5000/register
 Content-Type: application/json
 
 {
-    "password": "1",
-    "email": "nkosinathi@gmail.com",
-    "name": "Nkosinathi",
-    "user_id": "66ecee14f0d592d9c7eab105",
-    "level": "Easy",
-    "score": "1",
-    "gameName": "RollingBall"
+    "name":"talk",
+    "email":"talk@gmail.com",
+    "password":"1"
 }

@@ -11,6 +11,7 @@ import Memory from "../games/Memory/Memory";
 import Mole from "../games/Mole/Mole.jsx";
 import Dinosaur from "../games/Dinosaur/Dinosaur.jsx";
 import History from "../pages/History.jsx";
+import Analytics from "../pages/Analytics.jsx";
 
 function UserRoutes() {
   return (
@@ -28,6 +29,14 @@ function UserRoutes() {
         element={
           <ProtectedRoute>
             <History />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/analyitcs"
+        element={
+          <ProtectedRoute>
+            <Analytics/>
           </ProtectedRoute>
         }
       />

@@ -21,8 +21,7 @@ export default function Snake() {
   
   const saveGame = async () => {
     try {
-      const response = await axios.post('http://localh/saveQuizost:5000/saveSnake', {
-        user_id: user.id,
+      const response = await axios.post(`http://localhost:5000/user/${user.id}/score`, {
         level: difficulty,
         score: score,
         gameName: gameName,
@@ -37,7 +36,6 @@ export default function Snake() {
     const keyPress = (e) => {
         if (gameStatus && e.key === "Enter") {
             handleReset();
-            console.log(user.id)
             saveGame()
         }
        

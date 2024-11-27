@@ -10,6 +10,7 @@ export default function Memory() {
     const [popupVisible, setPopupVisible] = useState(false);
     const [difficulty, setDifficulty] = useState('Easy');
     const [items, setItems] = useState([]);
+    const [leveltime,setLeveltime]= useState(0)
     const [timer, setTimer] = useState(120);
     const [gameEndType, setGameEndType] = useState('');
     const [score, setScore] = useState(0);
@@ -45,10 +46,13 @@ export default function Memory() {
         // Set timer based on difficulty
         if (difficulty === 'Easy' || difficulty === 'Medium') {
             setTimer(60); 
+            setLeveltime(60);
         } else if (difficulty === 'Hard') {
             setTimer(90); 
+            setLeveltime(190);
         } else if (difficulty === 'EvilHard') {
             setTimer(120);
+            setLeveltime(120)
         }
 
     }, [difficulty]);
@@ -56,10 +60,9 @@ export default function Memory() {
     // Save game result to server
     const saveGame = async () => {
         try {
-            const response = await axios.post('http://localhost:5000/saveMemory', {
-                user_id: user.id,
+            const response = await axios.post(`http://localhost:5000/user/${user.id}/score`, {
                 level: difficulty,
-                time: timer,
+                score: leveltime-timer,
                 gameName: gameName,
             });
             console.log('Game saved:', response.data);
@@ -120,18 +123,31 @@ export default function Memory() {
     const handleStart = () => {
         setIsRunning(true);
         setMatchedPairs(0);  // Reset matched pairs count on start
+        if (difficulty === 'Easy' || difficulty === 'Medium') {
+            setTimer(60); 
+            setLeveltime(60);
+        } else if (difficulty === 'Hard') {
+            setTimer(90); 
+            setLeveltime(190);
+        } else if (difficulty === 'EvilHard') {
+            setTimer(120);
+            setLeveltime(120)
+        }
     };
 
     // Handle reset button click
     const handleReset = () => {
         setScore(0);
-         if (difficulty === "Easy" || difficulty === "Medium") {
-           setTimer(60);
-         } else if (difficulty === "Hard") {
-           setTimer(90);
-         } else if (difficulty === "EvilHard") {
-           setTimer(120);
-         }
+        if (difficulty === 'Easy' || difficulty === 'Medium') {
+            setTimer(60); 
+            setLeveltime(60);
+        } else if (difficulty === 'Hard') {
+            setTimer(90); 
+            setLeveltime(190);
+        } else if (difficulty === 'EvilHard') {
+            setTimer(120);
+            setLeveltime(120)
+        }
         setIsRunning(false);
         setMatchedPairs(0);  // Reset matched pairs count on reset
         setGameOver(false);
